@@ -4,7 +4,26 @@
     margin: 0;
     padding: 0;
 }
-
-img#Foto {
-    height: 350px;
+body {
+    background-color: black;
+}
+section#fundo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vw;
+    width: 100vw;
+    background: url(Imagens/jakob-owens-uWbRcJSJLV8-unsplash\ 2.png) no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+section article img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
 }
