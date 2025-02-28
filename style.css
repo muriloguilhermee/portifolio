@@ -107,12 +107,43 @@ article#conteudo > a > input:hover {
     color: black;
 } 
 section#skill {
-    background-repeat: no-repeat;
-    height: 920px;
-    width: 100vw;
-    background-position: center;
+    background-color: rgb(201, 201, 201);
+    height: 300x;
+    width: 100vw;  
+    padding: 50px;  
     display: flex;
     justify-content: space-evenly;
-    background-size: cover;
-    padding: 100px;
+}
+section#skill > article {
+    height: 400px;
+    width: 500px;
+}
+section#skill > article > h2 {
+    padding: 25px;
+}
+section#skill > article > p {
+    padding: 25px;
+}
+section#skill > article > div {
+    padding: 25px;
+}
+div.skill-container {
+    background: #E0E0E0; /* Cor de fundo da barra */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin: 10px 0; /* Margem acima e abaixo da barra */
+    overflow: hidden; /* Para ocultar parte da barra que excede */
+}
+
+div.skill-bar {
+    height: 20px; /* Altura da barra de habilidade */
+    border-radius: 5px; /* Bordas arredondadas */
+    background: #000000; /* Cor da barra de habilidade (verde) */
+    text-align: center; /* Centraliza o texto na barra */
+    color: white; /* Cor do texto */
+    line-height: 20px; /* Alinha o texto verticalmente */
+}
+
+div.skill-label {
+    margin: 15px 0 5px 0; /* Margem em cima e embaixo do rótulo */
+    font-weight: bold; /* Destaque para o rótulo */
 }
