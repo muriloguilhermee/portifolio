@@ -7,8 +7,9 @@
     font-family: "Poppins", serif;
     font-style: normal;
 }
-
-
+body {
+    width: 100vw;
+}
 section#principal {
     background-repeat: no-repeat;
     height: 920px;
@@ -65,16 +66,16 @@ p#dev::before, p#dev::after  {
 section#sec {
     display: flex;
     padding: 50px;
-    flex-flow: row nowrap;
     justify-content: center;
     align-self: center;
+    min-width: 500px;
     
 }
 article#img > img {
-    height: 700px;
-    width: 550px;
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+height: 700px;
+width: 550px;
+border-radius: 20px;
+box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 article#conteudo {
     width: 700px;
@@ -101,4 +102,4 @@ article#conteudo > a > input{
 article#conteudo > a > input:hover {
     background-color: white;
     color: black;
-}
+} 
