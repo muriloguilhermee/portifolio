@@ -47,15 +47,22 @@ article#perfil {
 } 
 article#perfil > p {
     padding: 5px;
-    font-size: 20px;
+    font-size: 15px;
 }
 article#perfil > img{
-    height: 170px;
-    width: 170px;
+    height: 150px;
+    width: 150px;
     border-radius: 100px;
 }
 p#dev::before, p#dev::after  {
     content: '---'; /* Adiciona o conteúdo de traço */
     padding: 0 10px; /* Espaçamento entre o traço e o texto */
+    margin: 0px;
 
+}
+section#sec {
+    display: flex;
+    justify-content: space-between;
+    background-size: cover;
+    padding: 10px
 }
