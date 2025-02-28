@@ -27,13 +27,13 @@ article#social, article#perfil, article#scroll{
 article#social {
     display: flex;
     flex-direction: column;
-    padding: 50px;
+    padding: 100px;
     font-size: 24px;
 } 
 article#scroll {
     writing-mode: vertical-rl;
     /* text-orientation: upright;  */
-    padding: 50px; 
+    padding: 100px; 
     font-size: 24px; /* Tamanho da fonte */    
 }
 article#scroll > a {
@@ -64,27 +64,30 @@ p#dev::before, p#dev::after  {
 
 }
 section#sec {
+    background-repeat: no-repeat;
+    height: 920px;
+    width: 100vw;
+    background-position: center;
     display: flex;
-    padding: 50px;
-    justify-content: center;
-    align-self: center;
-    min-width: 500px;
+    justify-content: space-evenly;
+    background-size: cover;
+    padding: 100px;
     
 }
 article#img > img {
-height: 700px;
-width: 550px;
+height: 650px;
+width: 500px;
 border-radius: 20px;
 box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 article#conteudo {
     width: 700px;
     align-self: center;
-    padding: 50px;
     font-size: 15px;
 }
 article#conteudo > p {
     padding: 10px;
+    text-align: justify;
 }
 article#conteudo > p#nome {
     padding-top: 20px;
