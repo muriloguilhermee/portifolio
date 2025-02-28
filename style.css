@@ -1,6 +1,61 @@
 @charset "UTF-8";
 
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    font-style: normal;
+}
+section#principal {
+    background-repeat: no-repeat;
+    height: 920px;
+    width: 100vw;
+    background-image: url(Imagens/jakob-owens-uWbRcJSJLV8-unsplash\ 2.png);
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    background-size: cover;
+    
+}
+article{
+    align-self: center;
+}
+article#social {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    font-size: 24px;
+} 
+article#scroll {
+    writing-mode: vertical-rl;
+    /* text-orientation: upright;  */
+    padding: 50px; 
+    font-size: 24px; /* Tamanho da fonte */    
+}
+article#scroll > a {
+    text-decoration: none;
+    color: black;
+}
+
+article#social > a {
+    padding: 5px;
+    color: black;
+}
+article#perfil {
+    text-align: center;
+} 
+article#perfil > p {
+    padding: 5px;
+    font-size: 20px;
+}
+article#perfil > img{
+    height: 170px;
+    width: 170px;
+    border-radius: 100px;
+}
+p#dev::before, p#dev::after  {
+    content: '---'; /* Adiciona o conteúdo de traço */
+    padding: 0 10px; /* Espaçamento entre o traço e o texto */
+
 }
