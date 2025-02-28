@@ -106,3 +106,13 @@ article#conteudo > a > input:hover {
     background-color: white;
     color: black;
 } 
+section#skill {
+    background-repeat: no-repeat;
+    height: 920px;
+    width: 100vw;
+    background-position: center;
+    display: flex;
+    justify-content: space-evenly;
+    background-size: cover;
+    padding: 100px;
+}
