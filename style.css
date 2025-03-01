@@ -7,6 +7,10 @@
     font-family: "Poppins", serif;
     font-style: normal;
 }
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     width: 100vw;
 }
@@ -108,11 +112,17 @@ article#conteudo > a > input:hover {
 } 
 section#skill {
     background-color: rgb(201, 201, 201);
-    height: 300x;
+    height: 500px;
     width: 100vw;  
-    padding: 50px;  
+    padding: 20px;  
     display: flex;
     justify-content: space-evenly;
+}
+section#skill > article > h2 {
+    font-size: 18px;
+}
+section#skill > article > p {
+    font-size: 15px;
 }
 section#skill > article {
     height: 400px;
@@ -146,4 +156,23 @@ div.skill-bar {
 div.skill-label {
     margin: 15px 0 5px 0; /* Margem em cima e embaixo do rótulo */
     font-weight: bold; /* Destaque para o rótulo */
+}
+section#final {
+    text-align: center;
+    padding: 50px; 
+    
+}
+section#final > article > h1 {
+    padding: 5px;
+}
+section#final > article > p {
+    padding: 10px 5px 5px 5px ;
+}
+section#final > article > p > a {
+    text-decoration: none;
+}
+footer {
+    text-align: center;
+    background-color: black;
+    color: white;
 }
