@@ -127,6 +127,7 @@ section#skill > article > p {
 section#skill > article {
     height: 400px;
     width: 500px;
+    min-width: 450px;
 }
 section#skill > article > h2 {
     padding: 25px;

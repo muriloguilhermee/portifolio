@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sriracha&display=swap" rel="stylesheet">    
     <title>Murilo Guilherme</title>
 </head>
-<body>    
+<body onload="exibirMensagem()">
     <main>
         <section id="principal">
             <article id="social">
@@ -21,7 +21,7 @@
             </article>
             <article id="perfil">
                 <img src="Imagens/Perfil.jpg" alt="Foto">
-                <p id="greeting"></p1>
+                <p id="saudacao"></p>
                 <p>Eu sou <b>Murilo Guilherme</b></p>
                 <p id="dev"><b>Desenvolvedor</b></p>
             </article>
@@ -101,28 +101,20 @@
     </footer>
 </body>
 <script>
-    // Função para exibir a saudação com base no horário
-    function displayGreeting() {
-        const now = new Date(); // Obtém a data e hora atual
-        const hours = now.getHours(); // Obtém a hora atual (0 a 23)
-        const greetingElement = document.getElementById('greeting');
+    function exibirMensagem() {
+        const agora = new Date();
+        const hora = agora.getHours();
+        let mensagem;
 
-        // Define a saudação com base na hora
-        let greeting;
-
-        if (hours < 12) {
-            greeting = "Bom dia!"; // De 0 até 11
-        } else if (hours < 18) {
-            greeting = "Boa tarde!"; // De 12 até 17
+        if (hora >= 5 && hora < 12) {
+            mensagem = "Bom dia!";
+        } else if (hora >= 12 && hora < 18) {
+            mensagem = "Boa tarde!";
         } else {
-            greeting = "Boa noite!"; // De 18 até 23
+            mensagem = "Boa noite!";
         }
 
-        // Exibe a saudação na página
-        greetingElement.innerText = greeting;
+        document.getElementById("saudacao").innerText = mensagem;
     }
-
-    // Chama a função quando a página é carregada
-    window.onload = displayGreeting;
 </script>
 </html>
