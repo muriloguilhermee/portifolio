@@ -6,11 +6,24 @@
         padding: 0px;
     }   
     section#principal{
-        min-width: 300px;
+        width: 550px;
+        flex-flow: column nowrap;  
+        align-items: center;
+        text-align: justify; 
+        
     }
+    article#social {
+        flex-direction: row;
+    }
+    article#scroll {
+        writing-mode: horizontal-tb;
+        /* text-orientation: upright;  */
+        padding: 100px; 
+        font-size: 24px; /* Tamanho da fonte */  
+    }    
     section#sec {
         height: 1420px;
-        min-width: 300px;
+        width: 550px;
         display: flex;
         flex-flow: column nowrap;  
         align-items: center;
@@ -34,7 +47,7 @@
     
     section#skill {
         height: 980px;
-        min-width: 300px; 
+        width: 550px; 
         padding: 10px;       
         flex-flow: column wrap;
         display: flex;
@@ -48,5 +61,20 @@
         content: ''; /* Adiciona o conteúdo de traço */
         padding: 0 10px; /* Espaçamento entre o traço e o texto */
         margin: 0px;
+    }
+    section#final {
+        width: 550px;
+        text-align: center;
+        padding: 50px; 
+        flex-flow: column wrap;
+        display: flex;
+        align-items: center;
+        text-align: justify; 
+    }
+    footer {
+        width: 550px;
+        text-align: center;
+        background-color: black;
+        color: white;
     }
 } 
