@@ -11,6 +11,7 @@
         align-items: center;
         text-align: justify; 
         
+        
     }
     article#social {
         flex-direction: row;
@@ -18,7 +19,6 @@
     article#scroll {
         writing-mode: horizontal-tb;
         /* text-orientation: upright;  */
-        padding: 100px; 
         font-size: 24px; /* Tamanho da fonte */  
     }    
     section#sec {
@@ -64,11 +64,8 @@
     }
     section#final {
         width: 550px;
-        text-align: center;
-        padding: 50px; 
-        flex-flow: column wrap;
         display: flex;
-        align-items: center;
+        justify-content: center;
         text-align: justify; 
     }
     footer {
@@ -76,5 +73,6 @@
         text-align: center;
         background-color: black;
         color: white;
+        
     }
 } 
