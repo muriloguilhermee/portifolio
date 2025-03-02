@@ -13,9 +13,9 @@ html {
 
 body {
     width: 100vw;
+
 }
 section#principal {
-    background-repeat: no-repeat;
     height: 920px;
     width: 100vw;
     background-image: url(Imagens/jakob-owens-uWbRcJSJLV8-unsplash\ 2.png);
@@ -68,7 +68,6 @@ p#dev::before, p#dev::after  {
 
 }
 section#sec {
-    background-repeat: no-repeat;
     height: 920px;
     width: 100vw;
     background-position: center;
@@ -116,7 +115,7 @@ section#skill {
     width: 100vw;  
     padding: 20px;  
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenly; 
 }
 section#skill > article > h2 {
     font-size: 18px;
@@ -160,8 +159,7 @@ div.skill-label {
 }
 section#final {
     text-align: center;
-    padding: 50px; 
-    
+    padding: 50px;     
 }
 section#final > article > h1 {
     padding: 5px;
