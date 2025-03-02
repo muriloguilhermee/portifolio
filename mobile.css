@@ -6,7 +6,7 @@
         padding: 0px;
     }   
     section#principal{
-        width: 550px;
+        width: 70vw;
         flex-flow: column nowrap;  
         align-items: center;
         text-align: justify; 
@@ -23,7 +23,7 @@
     }    
     section#sec {
         height: 1420px;
-        width: 550px;
+        width: 70vw;
         display: flex;
         flex-flow: column nowrap;  
         align-items: center;
@@ -36,6 +36,7 @@
         padding: 20px;  
     } 
     
+    
     article#img > img {
         height: 500px;
         width: 370px;
@@ -46,16 +47,23 @@
     }
     
     section#skill {
-        height: 980px;
-        width: 550px;
+        height: 1050px;
+        width: 70vw;
         padding: 10px;       
         flex-flow: column wrap;
         display: flex;
         align-items: center;
         text-align: justify;        
     }
-    section#skill h2{
+    section#skill h2  {
         text-align: center;
+        width: 400px;
+    }
+    article p {
+        width: 400px;
+    }
+    article div {
+        width: 350px;
     }
     p#dev::before, p#dev::after  {
         content: ''; /* Adiciona o conteúdo de traço */
@@ -63,13 +71,13 @@
         margin: 0px;
     }
     section#final {
-        width: 550px;
+        width: 70vw;
         display: flex;
         justify-content: center;
         text-align: justify; 
     }
     footer {
-        width: 550px;
+        width: 70vw;
         text-align: center;
         background-color: black;
         color: white;        
