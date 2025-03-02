@@ -6,11 +6,11 @@
         padding: 0px;
     }   
     section#principal{
-        width: 700;
+        min-width: 300px;
     }
     section#sec {
         height: 1420px;
-        width: 700px;
+        min-width: 300px;
         display: flex;
         flex-flow: column nowrap;  
         align-items: center;
@@ -34,7 +34,7 @@
     
     section#skill {
         height: 980px;
-        width: 700px; 
+        min-width: 300px; 
         padding: 10px;       
         flex-flow: column wrap;
         display: flex;
