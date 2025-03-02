@@ -65,7 +65,6 @@ p#dev::before, p#dev::after  {
     content: '---'; /* Adiciona o conteúdo de traço */
     padding: 0 10px; /* Espaçamento entre o traço e o texto */
     margin: 0px;
-
 }
 section#sec {
     height: 920px;

@@ -19,7 +19,7 @@
         font-size: 15px;  
         padding: 20px;  
     } 
-    }   
+    
     article#img > img {
         height: 500px;
         width: 370px;
@@ -40,5 +40,10 @@
     }
     section#skill h2{
         text-align: center;
+    }
+    p#dev::before, p#dev::after  {
+        content: ''; /* Adiciona o conteúdo de traço */
+        padding: 0 10px; /* Espaçamento entre o traço e o texto */
+        margin: 0px;
     }
 } 
