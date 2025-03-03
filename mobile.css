@@ -1,6 +1,47 @@
 @charset "UTF-8";
 
 @media screen and (max-width: 768px){
-    
+    body {
+        height: 100vw;
+        width: 500px;  
+    }
+    section#principal {
+        flex-direction: column;
+    }
+    article#social {
+        flex-direction: row;
+    }
+    article#scroll{ 
+        writing-mode: horizontal-tb;
+    }
+    section#sec {
+        flex-direction: column;
+    }
+    article#img > img {
+        height: 400px;
+        width: 300px;
+    }
+    article#conteudo{
+        width: 400px;
+        padding: 20px;
+    }
+    article#conteudo > a > input{ 
+        margin-top: 50px;
+        margin-left: 30px;
+    }
+    section#skill {
+        height: 1150px;
+        flex-direction: column;
+
+    }
+    section#skill > article > h2{ 
+        width: 400px;
+    }
+    section#skill > article > p {
+        width: 400px;
+    }
+    section#skill > article > div {
+        width: 400px;
+    }
+
 }
-    
