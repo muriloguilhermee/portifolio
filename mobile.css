@@ -3,7 +3,7 @@
 @media screen and (max-width: 768px){
     body {
         height: 100vw;
-        width: 400px;
+        width: 395px;
     }
     section#principal {
         flex-direction: column;
@@ -18,12 +18,12 @@
     section#sec {
         flex-direction: column;
         align-items: center;
-        width: 400px;
+        width: 395px;
         padding: 50px;
         padding-bottom: 0px;
     }
     article#img > img {
-        height: 400px;
+        height: 395px;
         width: 300px;
     }
     article#conteudo{
@@ -36,14 +36,14 @@
     }
     section#skill {
         height: 1150px;
-        width: 400px;
+        width: 395px;
         padding: 0px;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
     }
     section#skill > article {
-        height: 400px;
+        height: 395px;
         width: 350px;
     }
     section#skill > article > h2{ 
