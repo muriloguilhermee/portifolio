@@ -3,11 +3,11 @@
 @media screen and (max-width: 768px){
     body {
         height: 100vw;
-        width: 390px;
+        width: 400px;
     }
     section#principal {
         flex-direction: column;
-        width: 390px;
+        width: 400px;
     }
     article#social {
         flex-direction: row;
@@ -18,7 +18,7 @@
     section#sec {
         flex-direction: column;
         align-items: center;
-        width: 390px;
+        width: 400px;
         padding: 50px;
         padding-bottom: 0px;
     }
@@ -36,14 +36,14 @@
     }
     section#skill {
         height: 1150px;
-        width: 390px;
+        width: 400px;
         padding: 0px;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
     }
     section#skill > article {
-        height: 390px;
+        height: 400px;
         width: 350px;
     }
     section#skill > article > h2{ 
