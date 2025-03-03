@@ -8,6 +8,7 @@
     }
     section#principal {
         flex-direction: column;
+        height: 680px;
         width: 390px;
     }
     article#social {
