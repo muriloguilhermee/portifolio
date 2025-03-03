@@ -97,7 +97,8 @@ article#conteudo > a > input{
     color: white;
     font-size: 20px;
     border-radius: 20px;
-    margin-left: 200px;
+    margin-top: 50px;
+    margin-left: 150px;
     cursor: pointer
 }
 article#conteudo > a > input:hover {
