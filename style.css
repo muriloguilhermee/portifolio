@@ -107,7 +107,7 @@ article#conteudo > a > input:hover {
 } 
 section#skill {
     background-color: rgb(201, 201, 201);
-    height: 500px;
+    height: 670px;
     padding: 20px;  
     display: flex;
     justify-content: space-evenly; 
@@ -122,11 +122,12 @@ section#skill > article > p {
 section#skill > article {
     height: 400px;
     width: 500px;
-    text-align: justify;
-    
+    text-align: justify;    
 }
+
 section#skill > article > h2 {
     padding: 25px;
+    padding-top: 100px;
 }
 section#skill > article > p {
     padding: 25px;
