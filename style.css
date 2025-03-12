@@ -99,11 +99,13 @@ article#conteudo > a > input{
     border-radius: 20px;
     margin-top: 50px;
     margin-left: 150px;
-    cursor: pointer
+    cursor: pointer;
+    transition: 0.5s;
 }
 article#conteudo > a > input:hover {
     background-color: white;
     color: black;
+    transition: 0.5s;
 } 
 section#skill {
     background-color: rgb(201, 201, 201);
