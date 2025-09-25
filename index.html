@@ -42,7 +42,7 @@
                 <hr>
                 <p id="nome"><b>Nome:</b> Murilo Guilherme da Silva</p>
                 <p><b>Local: </b>  Franca - SP</p>
-                <p><b>Idade: </b>33 Anos</p>
+                <p><b>Idade: </b>34 Anos</p>
 
                 <a href="Curriculo.pdf" download>
                     <input type="button" value="Download CV">
@@ -93,6 +93,70 @@
                 </div>
             </article>
         </section>
+            <h2 id="projetos">Meus Projetos</h2>
+        <section class="projetos">
+            <article class="projeto">
+                <a href="https://muriloguilhermee.github.io/projeto-portal-de-noticia/" target="_blank"><img src="./Imagens/Imagems projetos/Projeto1.jpg" alt="Portal de Noticia">
+                    <h3>Portal de Noticias</h3>
+                </a>
+            </article>
+            <article class="projeto">
+                <a href="https://muriloguilhermee.github.io/projeto-patins-animation/" target="_blank"><img src="./Imagens/Imagems projetos/Patins.jpg" alt="Patins">
+                    <h3>Patins</h3>
+                </a>
+            </article>
+            <article class="projeto">
+                <a href="https://muriloguilhermee.github.io/projeto-zingen/" target="_blank"><img src="./Imagens/Imagems projetos/Zingen.jpg" alt="Zingen">
+                    <h3>Zingen</h3>
+                </a>
+            </article>
+            <article class="projeto">
+                <a href="https://muriloguilhermee.github.io/modelo-portifolio/" target="_blank"><img src="./Imagens/Imagems projetos/modelo portifólio.jpg" alt="Modelo Portifolio">
+                    <h3>Modelo Portifólio</h3>
+                </a>
+            </article>
+            <article class="projeto hidden">
+                <a href="https://muriloguilhermee.github.io/numbers/" target="_blank"><img src="Imagens/Imagems projetos/Projeto4.jpg" alt="Numbers">
+                    <h3>Numbers</h3>
+                </a>
+            </article>
+            <article class="projeto hidden">
+                <a href="https://muriloguilhermee.github.io/projeto-travelgram/" target="_blank"><img src="Imagens/Imagems projetos/Travelgram.jpg" alt="Travelgram">
+                    <h3>Travelgram</h3>
+                </a>
+            </article>
+            <article class="projeto hidden">
+                <a href="https://muriloguilhermee.github.io/projeto-turismo/" target="_blank"><img src="Imagens/Imagems projetos/Turismo.jpg" alt="Turismo">
+                    <h3>Turismo</h3>
+                </a>
+            </article>
+            <article class="projeto hidden">
+                <a href="https://muriloguilhermee.github.io/projeto-receita/" target="_blank"><img src="Imagens/Imagems projetos/Receita.jpg" alt="Receita">
+                    <h3>Receita</h3>
+                </a>
+            </article>
+            <article class="projeto hidden">
+                <a href="https://muriloguilhermee.github.io/projeto-login/" target="_blank"><img src="Imagens/Imagems projetos/Login.jpg" alt="Login">
+                    <h3>Login</h3>
+                </a>
+            </article>
+            <article class="projeto hidden">
+                <a href="https://muriloguilhermee.github.io/projeto-site-cordel/" target="_blank"><img src="Imagens/Imagems projetos/Cordel.jpg" alt="Cordel">
+                    <h3>Cordel</h3>
+                </a>
+            </article>
+            <article class="projeto hidden">
+                <a href="https://muriloguilhermee.github.io/conversor/" target="_blank"><img src="Imagens/Imagems projetos/Conversor.jpg" alt="Conversor">
+                    <h3>Conversor</h3>
+                </a>
+            </article>
+            <article class="projeto hidden">
+                <a href="https://muriloguilhermee.github.io/listacompras/" target="_blank"><img src="Imagens/Imagems projetos/Lista de compras.jpg" alt="Lista de Compras">
+                    <h3>Lista de Compras</h3>
+                </a>
+            </article>
+        </section>
+        <div class="btn-container"><button id="verMais">Ver mais</button></div>
         <section id="final">
             <article>
                 <h1>Informações Adicionais</h1>
@@ -108,22 +172,5 @@
         </p>
     </footer>
 </body>
-<script>
-    function exibirMensagem() {
-        const agora = new Date();
-        const hora = agora.getHours();
-        let mensagem;
-
-        if (hora >= 5 && hora < 12) {
-            mensagem = "Bom dia!";
-        } else if (hora >= 12 && hora < 18) {
-            mensagem = "Boa tarde!";
-        } else {
-            mensagem = "Boa noite!";
-        }
-
-        document.getElementById("saudacao").innerText = mensagem;
-    }
-     
-</script>
+<script src="script.js"></script>
 </html>
