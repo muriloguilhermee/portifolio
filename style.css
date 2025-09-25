@@ -228,16 +228,82 @@ button:hover {
     .projetos {
         grid-template-columns: repeat(2, 1fr); /* em telas médias */
     }
+    .projeto:hover {
+    transform: scale(1.05);
+    }
+    .projeto img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .projeto h3 {
+        margin: 10px 0;
+        font-size: 18px;
+        color: black;
+        text-decoration: none;
+    }
+    .projeto a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
 }
 
-@media (max-width: 600px) {
-    .projetos {
-      grid-template-columns: 1fr; /* em celular */
-    }
-    .projetos {
-    max-width: 100%; /* no celular ocupa toda a largura */
+
+@media (max-width: 720px) {
+  /* Use o mesmo nome da classe que você usa no HTML (.projetos) */
+  .projetos {
+    grid-template-columns: 1fr; /* 1 coluna no mobile */
+    gap: 16px;
+    padding: 20px;             /* reduz padding grande que quebrou layout */
+    justify-content: center;
+    margin: 0 auto;
   }
-}  
+
+  .projeto {
+    width: 100%;
+    max-width: 100%;
+    display: block;           /* garante que o card seja exibido */
+    margin: 0 auto;
+  }
+
+  .projeto img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  .projeto h3 {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .projeto.hidden {
+    display: none; /* mantém o comportamento de "escondido" quando usado pelo JS */
+  }
+
+  .btn-container {
+    text-align: center;
+    margin: 18px 0 40px;
+  }
+
+  button {
+    width: 100%;
+    max-width: 360px;
+    padding: 12px;
+    font-size: 16px;
+    margin: 0 auto;
+  }
+
+  /* se você tiver padding pesando em outras sections, reduza no mobile também */
+  section#sec,
+  section#skill,
+  .projetos {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 
 section#final {
     background-color: rgb(201, 201, 201);
