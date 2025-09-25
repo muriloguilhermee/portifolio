@@ -225,16 +225,16 @@ button:hover {
       margin-bottom: 50px;
     }
 @media (max-width: 1024px) {
-    .projetos-container {
+    .projetos {
         grid-template-columns: repeat(2, 1fr); /* em telas médias */
     }
 }
 
 @media (max-width: 600px) {
-    .projetos-container {
+    .projetos {
       grid-template-columns: 1fr; /* em celular */
     }
-    .projeto {
+    .projetos {
     max-width: 100%; /* no celular ocupa toda a largura */
   }
 }  
