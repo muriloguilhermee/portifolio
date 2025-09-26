@@ -160,6 +160,22 @@ div.skill-label {
 section.projetos > article > h2 {
     margin-top: 20px;
 }
+.skill-label {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* espaço entre ícone e texto */
+  font-size: 16px;
+  }
+
+.skill-label .icon {
+  width: 20px;
+  height: 20px;
+}
+#black{
+    img {
+  filter: brightness(0);
+}
+}
 #projetos {
     text-align: center;
     margin: 50px 0px 10px 0px;
@@ -168,7 +184,7 @@ section.projetos > article > h2 {
     text-decoration: none;
 }    
 .projetos {
-    padding: 50px 200px 50px 200px;
+    padding: 50px 100px 50px 100px;
     text-align: center;
     display: grid;
     justify-content: center;
@@ -178,25 +194,37 @@ section.projetos > article > h2 {
     
 }
 .projeto{
+    position: relative;
     background-color: #fff;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s; 
+    transition: transform 0.3s;
+    cursor: pointer;
 }
 .projeto:hover {
     transform: scale(1.05);
 }
 .projeto img {
     width: 100%;
-    height: auto;
+    height: 250px;
+    object-fit: cover;
     display: block;
+    filter: brightness(50%); /* escurece por padrão */
+    transition: filter 0.3s;
 }
 .projeto h3 {
-    margin: 10px 0;
-    font-size: 18px;
-    color: black;
-    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+    transition: opacity 0.3s;
+    pointer-events: none; /* evita clicar no texto */
 }
 .projeto a {
     text-decoration: none;
@@ -205,6 +233,36 @@ section.projetos > article > h2 {
 }
 .projeto.hidden {
     display: none;
+}
+.projeto:hover {
+    transform: scale(1.05);
+}
+
+.projeto:hover img {
+    filter: brightness(100%); /* clareia */
+}
+
+.projeto:hover h3 {
+    opacity: 0; /* título some */
+}
+.projeto:hover .icons {
+    opacity: 0; /* título e ícones somem */
+}
+/* rodapé com ícones */
+.projeto .icons {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+.projeto .icons img {
+    width: 15px;
+    height: 15px;
+    filter: brightness(0) invert(1);
 }
 button {
     padding: 10px 20px;
