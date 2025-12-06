@@ -1,0 +1,18 @@
+{
+  "name": "Portfólio - Murilo Guilherme",
+  "short_name": "Portfólio MG",
+  "description": "Portfólio profissional de desenvolvedor web",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "favicon-murilo.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
+

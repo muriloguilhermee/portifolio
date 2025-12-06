@@ -1,19 +1,60 @@
 @charset "UTF-8";
 
+/* ============================================
+   RESPONSIVIDADE COMPLETA
+   Breakpoints:
+   - Mobile pequeno: 320px - 480px
+   - Mobile grande: 481px - 768px
+   - Tablet: 769px - 1024px
+   - Desktop pequeno: 1025px - 1440px
+   - Desktop grande: 1441px+
+   ============================================ */
+
+/* ========== TABLET (769px - 1024px) ========== */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .projetos {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 40px 60px;
+    }
+    
+    section#sec {
+        padding: 80px 60px;
+    }
+    
+    article#img > img {
+        width: 400px;
+        height: auto;
+    }
+    
+    .contato-container {
+        grid-template-columns: 1fr 1.2fr;
+        gap: 2rem;
+    }
+    
+    .stats-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ========== MOBILE GRANDE (481px - 768px) ========== */
 @media screen and (max-width: 768px) {
     body {
         height: auto;
         min-width: 320px;
         width: 100%;
+        padding-top: 60px;
     }
 
+    /* Seção Principal */
     section#principal {
         flex-direction: column;
         height: auto;
         min-height: 100vh;
         width: 100%;
-        padding: 40px 20px;
+        padding: 60px 20px 40px;
         background-attachment: scroll;
+        margin-top: -60px;
+        gap: 30px;
     }
 
     nav#social {
@@ -22,6 +63,7 @@
         gap: 15px;
         justify-content: center;
         width: 100%;
+        order: 3;
     }
 
     nav#social > a {
@@ -30,22 +72,40 @@
         font-size: 20px;
     }
 
+    article#perfil {
+        order: 1;
+        margin: 20px 0;
+    }
+    
+    article#perfil > img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    article#perfil > p {
+        font-size: 16px;
+    }
+
     article#scroll {
         writing-mode: horizontal-tb;
         padding: 20px;
         text-align: center;
+        order: 2;
     }
 
     article#scroll > a {
         display: inline-flex;
         align-items: center;
         gap: 8px;
+        font-size: 18px;
     }
 
     article#scroll > a i {
         writing-mode: horizontal-tb;
         margin-top: 0;
     }
+
+    /* Seção Sobre */
     section#sec {
         flex-direction: column;
         align-items: center;
@@ -62,7 +122,7 @@
     article#img > img {
         height: auto;
         width: 100%;
-        max-width: 400px;
+        max-width: 100%;
         margin: 0 auto;
         display: block;
     }
@@ -71,6 +131,10 @@
         width: 100%;
         max-width: 100%;
         padding: 20px;
+    }
+    
+    article#conteudo > p.intro {
+        font-size: 20px;
     }
 
     article#conteudo > a.btn-download {
@@ -84,6 +148,8 @@
         max-width: 280px;
         margin: 0;
     }
+
+    /* Seção Habilidades */
     section#skill {
         min-height: auto;
         width: 100%;
@@ -125,6 +191,7 @@
         padding: 10px 0;
     }
 
+    /* Projetos */
     .projetos {
         padding: 30px 20px;
         grid-template-columns: 1fr;
@@ -134,17 +201,353 @@
     #projetos {
         font-size: 28px;
         margin: 50px 0 30px 0;
+        padding: 0 20px;
+    }
+    
+    .filtros-container {
+        padding: 0 20px;
+        gap: 0.75rem;
+    }
+    
+    .filtro-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
     }
 
+    /* Seção Final */
     section#final {
         padding: 50px 20px;
+    }
+    
+    section#final > article {
+        max-width: 100%;
     }
 
     section#final > article > h1 {
         font-size: 24px;
+        margin-bottom: 20px;
     }
 
     section#final > article > p {
         font-size: 16px;
+        padding: 12px 5px;
+        justify-content: center;
+    }
+    
+    /* Botão Voltar ao Topo */
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 1rem;
+    }
+}
+
+/* ========== MOBILE PEQUENO (320px - 480px) ========== */
+@media screen and (max-width: 480px) {
+    body {
+        padding-top: 55px;
+    }
+    
+    /* Navbar */
+    .nav-container {
+        padding: 0.75rem 1rem;
+    }
+    
+    .nav-menu {
+        gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .theme-toggle {
+        width: 35px;
+        height: 35px;
+        right: 1rem;
+    }
+    
+    .nav-toggle {
+        left: 1rem;
+    }
+
+    /* Seção Principal */
+    section#principal {
+        padding: 40px 15px 30px;
+        min-height: 90vh;
+    }
+    
+    article#perfil > img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    article#perfil > p {
+        font-size: 14px;
+        padding: 5px;
+    }
+    
+    nav#social > a {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    
+    article#scroll > a {
+        font-size: 16px;
+    }
+
+    /* Seção Sobre */
+    section#sec {
+        padding: 30px 15px;
+    }
+    
+    article#conteudo {
+        padding: 15px;
+    }
+    
+    article#conteudo > p {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+    
+    article#conteudo > p.intro {
+        font-size: 18px;
+    }
+    
+    article#conteudo > a.btn-download > button {
+        width: 100%;
+        max-width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    /* Habilidades */
+    section#skill {
+        padding: 30px 15px;
+    }
+    
+    section#skill > article#skill-text > h2 {
+        font-size: 24px;
+    }
+    
+    section#skill > article#skill-text > p {
+        font-size: 14px;
+    }
+    
+    .skill-label {
+        font-size: 14px;
+    }
+    
+    .skill-label .icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Projetos */
+    .projetos {
+        padding: 20px 15px;
+        gap: 15px;
+    }
+    
+    #projetos {
+        font-size: 24px;
+        margin: 40px 0 20px 0;
+        padding: 0 15px;
+    }
+    
+    .filtros-container {
+        padding: 0 15px;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+    
+    .filtro-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .projeto h3 {
+        font-size: 18px;
+    }
+    
+    .projeto-desc {
+        font-size: 0.8rem;
+    }
+
+    /* Estatísticas */
+    #estatisticas {
+        padding: 3rem 15px;
+    }
+    
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .stat-label {
+        font-size: 0.9rem;
+    }
+
+    /* Experiência */
+    #experiencia {
+        padding: 3rem 15px;
+    }
+    
+    #experiencia h2 {
+        font-size: 24px;
+        margin-bottom: 2rem;
+    }
+    
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-icon {
+        width: 50px;
+        height: 50px;
+        left: 20px;
+        font-size: 1.2rem;
+    }
+    
+    .timeline-content {
+        width: calc(100% - 70px);
+        margin-left: 70px !important;
+        padding: 1.5rem;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .timeline-content p {
+        font-size: 0.9rem;
+    }
+
+    /* Contato */
+    #contato {
+        padding: 3rem 15px;
+    }
+    
+    #contato h2 {
+        font-size: 24px;
+        margin-bottom: 2rem;
+    }
+    
+    .contato-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.6rem;
+        font-size: 14px;
+    }
+    
+    .btn-submit {
+        padding: 0.875rem;
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 20px 15px;
+        font-size: 14px;
+    }
+    
+    section#final {
+        padding: 40px 15px;
+    }
+    
+    section#final > article {
+        max-width: 100%;
+    }
+    
+    section#final > article > h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    section#final > article > p {
+        font-size: 14px;
+        padding: 10px 0;
+        justify-content: center;
+    }
+    
+    section#final > article > p i {
+        width: 20px;
+        font-size: 1rem;
+    }
+}
+
+/* ========== TABLET PORTRAIT (481px - 768px) ========== */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .projetos {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px 30px;
+    }
+    
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    article#img > img {
+        max-width: 450px;
+    }
+}
+
+/* ========== LANDSCAPE ORIENTATION ========== */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    section#principal {
+        min-height: auto;
+        height: 100vh;
+        padding: 20px;
+    }
+    
+    article#perfil > img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    nav#social {
+        gap: 10px;
+    }
+    
+    nav#social > a {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* ========== PRINT STYLES ========== */
+@media print {
+    .navbar-fixed,
+    .back-to-top,
+    .theme-toggle,
+    .nav-toggle,
+    .filtros-container,
+    button#verMais {
+        display: none !important;
+    }
+    
+    body {
+        padding-top: 0;
+    }
+    
+    section#principal {
+        margin-top: 0;
+        page-break-after: always;
     }
 }
