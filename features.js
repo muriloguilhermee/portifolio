@@ -31,15 +31,57 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Navbar com scroll
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
-        } else {
+    // Navbar com scroll - ajustar cores baseado na posição
+    function updateNavbarStyle() {
+        const principalSection = document.querySelector('section#principal');
+        const principalHeight = principalSection ? principalSection.offsetHeight : 920;
+        const scrollY = window.pageYOffset;
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        
+        if (scrollY < principalHeight - 100) {
+            // Menu sobre a imagem de fundo - transparente com texto branco
+            navbar.style.background = isDarkMode ? 'rgba(31, 41, 55, 0.1)' : 'rgba(255, 255, 255, 0.1)';
             navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            navLinks.forEach(link => {
+                link.style.color = '#ffffff';
+                link.style.textShadow = '0 2px 4px rgba(0, 0, 0, 0.3)';
+            });
+            const themeToggle = document.querySelector('.theme-toggle');
+            if (themeToggle) {
+                themeToggle.style.color = '#ffffff';
+                themeToggle.style.background = 'rgba(255, 255, 255, 0.2)';
+            }
+        } else {
+            // Menu sobre fundo claro/escuro - fundo mais sólido
+            if (isDarkMode) {
+                navbar.style.background = 'rgba(31, 41, 55, 0.95)';
+                navLinks.forEach(link => {
+                    link.style.color = '#f9fafb';
+                    link.style.textShadow = '';
+                });
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navLinks.forEach(link => {
+                    link.style.color = '';
+                    link.style.textShadow = '';
+                });
+            }
+            navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
+            const themeToggle = document.querySelector('.theme-toggle');
+            if (themeToggle) {
+                themeToggle.style.color = '';
+                themeToggle.style.background = '';
+            }
         }
+    }
+    
+    window.addEventListener('scroll', () => {
+        updateNavbarStyle();
         updateActiveNav();
     });
+    
+    // Atualizar estilo inicial
+    updateNavbarStyle();
     
     // Menu mobile toggle
     if (navToggle) {
@@ -89,6 +131,8 @@ document.addEventListener('DOMContentLoaded', function() {
         themeIcon.classList.remove('fa-moon');
         themeIcon.classList.add('fa-sun');
     }
+    // Atualizar navbar após carregar tema
+    setTimeout(updateNavbarStyle, 100);
     
     themeToggle.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
@@ -103,6 +147,8 @@ document.addEventListener('DOMContentLoaded', function() {
             themeIcon.classList.add('fa-moon');
             localStorage.setItem('theme', 'light');
         }
+        // Atualizar navbar quando tema mudar
+        updateNavbarStyle();
     });
     
     // ========== FILTRO DE PROJETOS ==========
