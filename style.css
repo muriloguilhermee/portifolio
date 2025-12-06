@@ -417,6 +417,19 @@ div.skill-label {
     transform: scale(1.1);
 }
 
+.skill-label i.fas {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.skill-label:hover i.fas {
+    transform: scale(1.1);
+}
+
 #black img {
     filter: brightness(0);
 }
