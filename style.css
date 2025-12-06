@@ -642,13 +642,22 @@ section#final > article > p > a:hover {
 }
 
 section#final > article > p i {
-    color: var(--accent-color);
-    width: 24px;
+    color: var(--accent-color) !important;
+    width: 24px !important;
+    min-width: 24px;
     text-align: center;
-    font-size: 1.2rem;
-    display: inline-block;
-    line-height: 1;
+    font-size: 1.2rem !important;
+    display: inline-block !important;
+    line-height: 1 !important;
     flex-shrink: 0;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+section#final > article > p i::before {
+    display: inline-block;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 footer {

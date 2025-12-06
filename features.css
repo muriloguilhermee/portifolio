@@ -367,12 +367,22 @@ body.dark-mode .nav-toggle span {
 }
 
 .contato-info p i {
-    font-size: 1.2rem;
-    color: var(--accent-color);
-    width: 24px;
+    font-size: 1.2rem !important;
+    color: var(--accent-color) !important;
+    width: 24px !important;
+    min-width: 24px;
     text-align: center;
+    display: inline-block !important;
+    line-height: 1 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    flex-shrink: 0;
+}
+
+.contato-info p i::before {
     display: inline-block;
-    line-height: 1;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .contato-info a {
@@ -598,6 +608,9 @@ body.dark-mode .contato-info p {
 
 body.dark-mode .contato-info p i {
     color: #6366f1 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-block !important;
 }
 
 body.dark-mode .contato-info a {
@@ -631,6 +644,9 @@ body.dark-mode section#final > article > p {
 
 body.dark-mode section#final > article > p i {
     color: #6366f1 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-block !important;
 }
 
 body.dark-mode section#final > article > p > a {
