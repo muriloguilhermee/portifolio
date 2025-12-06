@@ -490,6 +490,30 @@
         width: 20px;
         font-size: 1rem;
     }
+    
+    #certificados {
+        padding: 3rem 15px;
+    }
+    
+    #certificados h2 {
+        font-size: 24px;
+        margin-bottom: 2rem;
+    }
+    
+    .certificados-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .certificado-card {
+        padding: 1.5rem;
+    }
+    
+    .certificado-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
 }
 
 /* ========== TABLET PORTRAIT (481px - 768px) ========== */

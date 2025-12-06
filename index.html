@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mobile.css">
     <link rel="stylesheet" href="features.css">
+    <link rel="stylesheet" href="enhancements.css">
     <link rel="shortcut icon" href="favicon-murilo.ico" type="image/x-icon">
     <link rel="manifest" href="manifest.json">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" as="style">
@@ -49,6 +50,34 @@
     <title>Murilo Guilherme | Desenvolvedor Web</title>
 </head>
 <body onload="exibirMensagem()">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-inner">
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+            </div>
+            <div class="loader-text">Carregando...</div>
+        </div>
+    </div>
+    
+    <!-- Cursor Personalizado -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-dot"></div>
+    
     <!-- Menu de Navegação Fixo -->
     <nav id="navbar" class="navbar-fixed" aria-label="Navegação principal">
         <div class="nav-container">
@@ -86,9 +115,21 @@
             <article id="perfil">
                 <img src="Imagens/Perfil.jpg" alt="Foto de perfil de Murilo Guilherme">
                 <p id="saudacao" aria-live="polite"></p>
-                <p>Eu sou <strong>Murilo Guilherme</strong></p>
-                <p id="dev"><strong>Desenvolvedor</strong></p>
+                <p>Eu sou <strong id="typing-name">Murilo Guilherme</strong></p>
+                <p id="dev"><strong id="typing-title">Desenvolvedor</strong></p>
             </article>
+            
+            <!-- Partículas animadas -->
+            <div class="particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
             <article id="scroll">
                 <a href="#img" aria-label="Rolar para baixo">Scroll Down <i class="fas fa-chevron-down"></i></a>
             </article>
@@ -492,4 +533,6 @@
     </footer>
     <script src="script.js"></script>
     <script src="features.js"></script>
+    <script src="enhancements.js"></script>
+</body>
 </html>

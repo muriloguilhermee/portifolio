@@ -32,12 +32,16 @@ document.addEventListener('DOMContentLoaded', function() {
     let mostrando = false;
 
     if (btn && projetosOcultosInicial.length > 0) {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
             if (!mostrando) {
                 // Mostrar projetos com animação suave
                 projetosOcultosInicial.forEach((projeto, index) => {
                     setTimeout(() => {
                         projeto.classList.remove('hidden');
+                        projeto.style.display = 'block';
                         projeto.style.opacity = '0';
                         projeto.style.transform = 'translateY(30px)';
                         projeto.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
@@ -51,17 +55,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 btn.textContent = "Ver menos";
             } else {
                 // Ocultar projetos com animação suave (em ordem reversa)
-                const projetosVisiveis = projetosOcultosInicial.filter(p => !p.classList.contains('hidden'));
-                projetosVisiveis.reverse().forEach((projeto, index) => {
+                projetosOcultosInicial.reverse().forEach((projeto, index) => {
                     setTimeout(() => {
                         projeto.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
                         projeto.style.opacity = '0';
                         projeto.style.transform = 'translateY(30px)';
                         setTimeout(() => {
                             projeto.classList.add('hidden');
-                        }, 500); // Aguarda a animação terminar antes de ocultar
+                            projeto.style.display = 'none';
+                        }, 500);
                     }, index * 80);
                 });
+                // Reverter a ordem para próxima vez
+                projetosOcultosInicial.reverse();
                 mostrando = false;
                 btn.textContent = "Ver mais";
             }

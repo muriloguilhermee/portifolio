@@ -465,6 +465,7 @@ div.skill-label {
     cursor: pointer;
     animation: fadeInUp 0.6s ease-out;
     animation-fill-mode: both;
+    border: 1px solid transparent;
 }
 
 @keyframes fadeInUp {
@@ -483,9 +484,28 @@ div.skill-label {
 .projeto:nth-child(3) { animation-delay: 0.3s; }
 .projeto:nth-child(4) { animation-delay: 0.4s; }
 
+.projeto::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.projeto:hover::after {
+    opacity: 1;
+}
+
 .projeto:hover {
     transform: translateY(-10px) scale(1.02);
-    box-shadow: var(--shadow-xl);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+    border-color: var(--accent-color);
 }
 
 .projeto img {

@@ -118,27 +118,29 @@ document.addEventListener('DOMContentLoaded', function() {
             const filtro = btn.getAttribute('data-filtro');
             
             projetos.forEach(projeto => {
+                // Respeitar projetos ocultos pelo botão "Ver mais"
+                const isHiddenByButton = projeto.classList.contains('hidden') && Array.from(projetos).indexOf(projeto) >= 3;
+                
                 if (filtro === 'todos') {
-                    if (!projeto.classList.contains('hidden')) {
+                    // Se não estiver oculto pelo botão "Ver mais", mostrar
+                    if (!isHiddenByButton) {
                         projeto.style.display = 'block';
-                        setTimeout(() => {
-                            projeto.style.opacity = '1';
-                            projeto.style.transform = 'translateY(0)';
-                        }, 50);
+                        projeto.style.opacity = '1';
+                        projeto.style.transform = 'translateY(0)';
                     }
                 } else {
                     const tech = projeto.getAttribute('data-tech') || '';
-                    if (tech.includes(filtro)) {
+                    if (tech.includes(filtro) && !isHiddenByButton) {
                         projeto.style.display = 'block';
-                        setTimeout(() => {
-                            projeto.style.opacity = '1';
-                            projeto.style.transform = 'translateY(0)';
-                        }, 50);
-                    } else {
+                        projeto.style.opacity = '1';
+                        projeto.style.transform = 'translateY(0)';
+                    } else if (!isHiddenByButton) {
                         projeto.style.opacity = '0';
                         projeto.style.transform = 'translateY(20px)';
                         setTimeout(() => {
-                            projeto.style.display = 'none';
+                            if (projeto.style.opacity === '0') {
+                                projeto.style.display = 'none';
+                            }
                         }, 300);
                     }
                 }
@@ -197,51 +199,82 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========== FORMULÁRIO DE CONTATO ==========
     const contactForm = document.getElementById('contactForm');
     const formMessage = document.getElementById('form-message');
+    const submitButton = contactForm ? contactForm.querySelector('.btn-submit') : null;
     
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             
+            // Desabilitar botão durante envio
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            }
+            
             const formData = new FormData(contactForm);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const subject = formData.get('subject');
+            const message = formData.get('message');
             
-            // Para usar Formspree, substitua YOUR_FORM_ID pelo seu ID
-            // Obtenha em: https://formspree.io/
-            const formAction = contactForm.getAttribute('action');
-            
-            if (formAction && formAction.includes('formspree.io')) {
-                try {
-                    const response = await fetch(formAction, {
-                        method: 'POST',
-                        body: formData,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    });
-                    
-                    if (response.ok) {
-                        formMessage.textContent = 'Mensagem enviada com sucesso!';
-                        formMessage.className = 'form-message success';
-                        formMessage.style.display = 'block';
-                        contactForm.reset();
-                    } else {
-                        throw new Error('Erro ao enviar');
-                    }
-                } catch (error) {
-                    formMessage.textContent = 'Erro ao enviar mensagem. Por favor, envie um e-mail diretamente para murilogcode@gmail.com';
+            // Validação básica
+            if (!name || !email || !subject || !message) {
+                if (formMessage) {
+                    formMessage.textContent = 'Por favor, preencha todos os campos obrigatórios.';
                     formMessage.className = 'form-message error';
                     formMessage.style.display = 'block';
                 }
-            } else {
-                // Fallback: abrir cliente de email
-                const email = 'murilogcode@gmail.com';
-                const subject = encodeURIComponent(formData.get('subject'));
-                const body = encodeURIComponent(formData.get('message') + '\n\nDe: ' + formData.get('name') + ' (' + formData.get('email') + ')');
-                window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Mensagem';
+                }
+                return;
             }
             
-            setTimeout(() => {
-                formMessage.style.display = 'none';
-            }, 5000);
+            // Simular envio (você pode integrar com Formspree, EmailJS, etc.)
+            // Por enquanto, vamos abrir o cliente de email com os dados preenchidos
+            try {
+                const emailBody = `Olá Murilo,\n\n${message}\n\n---\nNome: ${name}\nE-mail: ${email}`;
+                const mailtoLink = `mailto:murilogcode@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+                
+                // Tentar abrir o cliente de email
+                window.location.href = mailtoLink;
+                
+                // Mostrar mensagem de sucesso
+                if (formMessage) {
+                    formMessage.textContent = 'Redirecionando para seu cliente de email... Se não abrir, envie manualmente para murilogcode@gmail.com';
+                    formMessage.className = 'form-message success';
+                    formMessage.style.display = 'block';
+                }
+                
+                // Limpar formulário após 2 segundos
+                setTimeout(() => {
+                    contactForm.reset();
+                    if (formMessage) {
+                        formMessage.textContent = 'Mensagem preparada! Verifique seu cliente de email.';
+                    }
+                }, 2000);
+                
+            } catch (error) {
+                if (formMessage) {
+                    formMessage.textContent = 'Erro ao preparar mensagem. Por favor, envie um e-mail diretamente para murilogcode@gmail.com';
+                    formMessage.className = 'form-message error';
+                    formMessage.style.display = 'block';
+                }
+            } finally {
+                // Reabilitar botão após 3 segundos
+                setTimeout(() => {
+                    if (submitButton) {
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Mensagem';
+                    }
+                    if (formMessage) {
+                        setTimeout(() => {
+                            formMessage.style.display = 'none';
+                        }, 5000);
+                    }
+                }, 3000);
+            }
         });
     }
     
