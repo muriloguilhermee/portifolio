@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Murilo Guilherme - Desenvolvedor Web especializado em HTML5, CSS3, JavaScript, Node.js e React. Confira meus projetos e habilidades.">
+    <meta name="keywords" content="desenvolvedor web, frontend, backend, JavaScript, React, Node.js, HTML5, CSS3, portfólio">
+    <meta name="author" content="Murilo Guilherme da Silva">
+    <meta property="og:title" content="Murilo Guilherme - Desenvolvedor Web">
+    <meta property="og:description" content="Portfólio profissional de desenvolvedor web com projetos e habilidades técnicas">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mobile.css">
     <link rel="shortcut icon" href="favicon-murilo.ico" type="image/x-icon">
@@ -10,47 +16,51 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sriracha&display=swap" rel="stylesheet">    
-    <title>Murilo Guilherme</title>
+    <title>Murilo Guilherme | Desenvolvedor Web</title>
 </head>
 <body onload="exibirMensagem()">
     <main>
-        <section id="principal">
-            <article id="social">
-                <a href="https://www.instagram.com/murilloguilhermee?igsh=MWRreTk1aDlza3N4Mg%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/murilo-guilherme-2624b5236/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/muriloguilhermee" target="_blank"><i class="fab fa-github"></i></a>
-            </article>
+        <section id="principal" aria-label="Seção principal">
+            <nav id="social" aria-label="Redes sociais">
+                <a href="https://www.instagram.com/murilloguilhermee?igsh=MWRreTk1aDlza3N4Mg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/murilo-guilherme-2624b5236/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/muriloguilhermee" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </nav>
             <article id="perfil">
-                <img src="Imagens/Perfil.jpg" alt="Foto">
-                <p id="saudacao"></p>
-                <p>Eu sou <b>Murilo Guilherme</b></p>
-                <p id="dev"><b>Desenvolvedor</b></p>
+                <img src="Imagens/Perfil.jpg" alt="Foto de perfil de Murilo Guilherme">
+                <p id="saudacao" aria-live="polite"></p>
+                <p>Eu sou <strong>Murilo Guilherme</strong></p>
+                <p id="dev"><strong>Desenvolvedor</strong></p>
             </article>
             <article id="scroll">
-                <a href="#img">Scroll Down </a>
+                <a href="#img" aria-label="Rolar para baixo">Scroll Down <i class="fas fa-chevron-down"></i></a>
             </article>
         </section>
-        <section id="sec">
+        <section id="sec" aria-label="Sobre mim">
             <article id="img">
-                <img src="Imagens/IMG_6113.jpeg" alt="Perfil">
+                <img src="Imagens/IMG_6113.jpeg" alt="Murilo Guilherme - Desenvolvedor">
             </article>
             <article id="conteudo">
-                <p>Eu sou Desenvolvedor</p>
-                <p>Tenho domínio em <b>HTML5</b> e <b>CSS3</b>, criando sites responsivos e visualmente atraentes. Estruturo conteúdos de forma intuitiva, garantindo experiências fluidas e agradáveis para os usuários.</p>
-                <p>Atualmente, estou evoluindo no universo do <b>JavaScript</b>, explorando <b>Node.js</b> e <b>React</b> para desenvolver aplicações web modernas e dinâmicas. Cada novo aprendizado me motiva ainda mais a criar soluções inovadoras!</p>
+                <h2 class="sr-only">Sobre mim</h2>
+                <p class="intro">Eu sou Desenvolvedor</p>
+                <p>Tenho domínio em <strong>HTML5</strong> e <strong>CSS3</strong>, criando sites responsivos e visualmente atraentes. Estruturo conteúdos de forma intuitiva, garantindo experiências fluidas e agradáveis para os usuários.</p>
+                <p>Atualmente, estou evoluindo no universo do <strong>JavaScript</strong>, explorando <strong>Node.js</strong> e <strong>React</strong> para desenvolver aplicações web modernas e dinâmicas. Cada novo aprendizado me motiva ainda mais a criar soluções inovadoras!</p>
                 <p>Sou movido por desafios e pela busca constante de aprimoramento. Estou sempre pronto para aprender, evoluir e transformar ideias em realidade!</p>
                 <hr>
-                <p id="nome"><b>Nome:</b> Murilo Guilherme da Silva</p>
-                <p><b>Local: </b>  Franca - SP</p>
-                <p><b>Idade: </b>34 Anos</p>
-
-                <a href="Curriculo.pdf" download>
-                    <input type="button" value="Download CV">
+                <div class="info-pessoal">
+                    <p id="nome"><strong>Nome:</strong> Murilo Guilherme da Silva</p>
+                    <p><strong>Local:</strong> Franca - SP</p>
+                    <p><strong>Idade:</strong> 34 Anos</p>
+                </div>
+                <a href="Curriculo.pdf" download class="btn-download" aria-label="Baixar currículo em PDF">
+                    <button type="button">
+                        <i class="fas fa-download"></i> Download CV
+                    </button>
                 </a>
             </article>
         </section>
-        <section id="skill">
-            <article id="skill">
+        <section id="skill" aria-label="Habilidades técnicas">
+            <article id="skill-text">
                 <h2>Minhas Habilidades</h2>
                 <p>Sou uma pessoa altamente proativa, não descanso até resolver um problema ou concluir uma tarefa. Quando me proponho a algo, coloco todo meu foco e energia para alcançar o objetivo, buscando soluções criativas e eficazes. Tenho um grande compromisso com o aprendizado contínuo e estou sempre em busca de novas habilidades para melhorar minha performance. Atualmente, estou me dedicando ao aprendizado de JavaScript e API REST, pois, sei que essas competências são essenciais para o desenvolvimento de soluções tecnológicas cada vez mais completas e inovadoras. Com minha determinação e foco, sei que posso superar qualquer desafio que surgir em meu caminho.</p>
             </article>
@@ -93,177 +103,193 @@
                 </div>
             </article>
         </section>
-            <h2 id="projetos">Meus Projetos</h2>
-        <section class="projetos">
+        <h2 id="projetos">Meus Projetos</h2>
+        <section class="projetos" aria-label="Portfólio de projetos">
             <article class="projeto">
-                <a href="https://muriloguilhermee.github.io/numbers/" target="_blank"><img src="Imagens/Imagems projetos/Projeto4.jpg" alt="Numbers">
+                <a href="https://muriloguilhermee.github.io/numbers/" target="_blank" rel="noopener noreferrer" aria-label="Projeto Numbers">
+                    <img src="Imagens/Imagems projetos/Projeto4.jpg" alt="Projeto Numbers">
                     <h3>Numbers</h3>
-                    <div class="icons">
-                        <img src="Imagens/tecnologias/html5.svg" alt="HTML">
-                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS">
+                    <div class="icons" aria-label="Tecnologias utilizadas">
+                        <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
+                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS3">
                         <img src="Imagens/tecnologias/js.svg" alt="JavaScript">
-                        <img src="Imagens/tecnologias/figma.svg" alt="JavaScript">
+                        <img src="Imagens/tecnologias/figma.svg" alt="Figma">
                     </div>
                 </a>
             </article>
             <article class="projeto">
-                <a href="https://muriloguilhermee.github.io/conversor/" target="_blank"><img src="Imagens/Imagems projetos/Conversor.jpg" alt="Conversor">
+                <a href="https://muriloguilhermee.github.io/conversor/" target="_blank" rel="noopener noreferrer" aria-label="Projeto Conversor">
+                    <img src="Imagens/Imagems projetos/Conversor.jpg" alt="Projeto Conversor">
                     <h3>Conversor</h3>
-                    <div class="icons">
-                        <img src="Imagens/tecnologias/html5.svg" alt="HTML">
-                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS">
+                    <div class="icons" aria-label="Tecnologias utilizadas">
+                        <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
+                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS3">
                         <img src="Imagens/tecnologias/js.svg" alt="JavaScript">
-                        <img src="Imagens/tecnologias/figma.svg" alt="JavaScript">
+                        <img src="Imagens/tecnologias/figma.svg" alt="Figma">
                     </div>
                 </a>
             </article>
             <article class="projeto">
-                <a href="https://muriloguilhermee.github.io/Reembolso/" target="_blank"><img src="Imagens/Imagems projetos/Reembolso.jpg" alt="Reembolso">
+                <a href="https://muriloguilhermee.github.io/Reembolso/" target="_blank" rel="noopener noreferrer" aria-label="Projeto Reembolso">
+                    <img src="Imagens/Imagems projetos/Reembolso.jpg" alt="Projeto Reembolso">
                     <h3>Reembolso</h3>
-                    <div class="icons">
-                        <img src="Imagens/tecnologias/html5.svg" alt="HTML">
-                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS">
+                    <div class="icons" aria-label="Tecnologias utilizadas">
+                        <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
+                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS3">
                         <img src="Imagens/tecnologias/js.svg" alt="JavaScript">
-                        <img src="Imagens/tecnologias/figma.svg" alt="JavaScript">
+                        <img src="Imagens/tecnologias/figma.svg" alt="Figma">
                     </div>
                 </a>
             </article>
-            <article class="projeto">
-                <a href="https://muriloguilhermee.github.io/listacompras/" target="_blank"><img src="Imagens/Imagems projetos/Lista de compras.jpg" alt="Lista de Compras">
+            <article class="projeto hidden">
+                <a href="https://muriloguilhermee.github.io/listacompras/" target="_blank" rel="noopener noreferrer" aria-label="Projeto Lista de Compras">
+                    <img src="Imagens/Imagems projetos/Lista de compras.jpg" alt="Projeto Lista de Compras">
                     <h3>Lista de Compras</h3>
-                    <div class="icons">
-                        <img src="Imagens/tecnologias/html5.svg" alt="HTML">
-                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS">
+                    <div class="icons" aria-label="Tecnologias utilizadas">
+                        <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
+                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS3">
                         <img src="Imagens/tecnologias/js.svg" alt="JavaScript">
-                        <img src="Imagens/tecnologias/figma.svg" alt="JavaScript">
+                        <img src="Imagens/tecnologias/figma.svg" alt="Figma">
                     </div>
                 </a>
             </article>
             <article class="projeto hidden">
-                <a href="https://muriloguilhermee.github.io/projeto-patins-animation/" target="_blank"><img src="./Imagens/Imagems projetos/Patins.jpg" alt="Patins">
+                <a href="https://muriloguilhermee.github.io/projeto-patins-animation/" target="_blank" rel="noopener noreferrer" aria-label="Projeto Patins">
+                    <img src="./Imagens/Imagems projetos/Patins.jpg" alt="Projeto Patins">
                     <h3>Patins</h3>
-                    <div class="icons">
-                        <img src="Imagens/tecnologias/html5.svg" alt="HTML">
-                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS">                        
-                        <img src="Imagens/tecnologias/figma.svg" alt="JavaScript">
+                    <div class="icons" aria-label="Tecnologias utilizadas">
+                        <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
+                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS3">                        
+                        <img src="Imagens/tecnologias/figma.svg" alt="Figma">
                     </div>
                 </a>
             </article>
             <article class="projeto hidden">
-                <a href="https://muriloguilhermee.github.io/projeto-portal-de-noticia/" target="_blank"><img src="./Imagens/Imagems projetos/Projeto1.jpg" alt="Portal de Noticia">
+                <a href="https://muriloguilhermee.github.io/projeto-portal-de-noticia/" target="_blank" rel="noopener noreferrer" aria-label="Projeto Portal de Notícias">
+                    <img src="./Imagens/Imagems projetos/Projeto1.jpg" alt="Projeto Portal de Notícias">
                     <h3>Portal de Noticias</h3>
-                    <div class="icons">
-                        <img src="Imagens/tecnologias/html5.svg" alt="HTML">
-                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS">                        
-                        <img src="Imagens/tecnologias/figma.svg" alt="JavaScript">
+                    <div class="icons" aria-label="Tecnologias utilizadas">
+                        <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
+                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS3">                        
+                        <img src="Imagens/tecnologias/figma.svg" alt="Figma">
                     </div>
                 </a>
             </article>
             <article class="projeto hidden">
-                <a href="https://muriloguilhermee.github.io/projeto-zingen/" target="_blank"><img src="./Imagens/Imagems projetos/Zingen.jpg" alt="Zingen">
+                <a href="https://muriloguilhermee.github.io/projeto-zingen/" target="_blank" rel="noopener noreferrer" aria-label="Projeto Zingen">
+                    <img src="./Imagens/Imagems projetos/Zingen.jpg" alt="Projeto Zingen">
                     <h3>Zingen</h3>
-                    <div class="icons">
-                        <img src="Imagens/tecnologias/html5.svg" alt="HTML">
-                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS">                        
+                    <div class="icons" aria-label="Tecnologias utilizadas">
+                        <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
+                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS3">                        
                         <img src="Imagens/tecnologias/figma.svg" alt="Figma">
                     </div>
                 </a>
             </article>
             <article class="projeto hidden">
-                <a href="https://muriloguilhermee.github.io/projeto-formulario/" target="_blank"><img src="./Imagens/Imagems projetos/Formulário.jpg" alt="Formulário">
+                <a href="https://muriloguilhermee.github.io/projeto-formulario/" target="_blank" rel="noopener noreferrer" aria-label="Projeto Formulário">
+                    <img src="./Imagens/Imagems projetos/Formulário.jpg" alt="Projeto Formulário">
                     <h3>Formulário</h3>
-                    <div class="icons">
-                        <img src="Imagens/tecnologias/html5.svg" alt="HTML">
-                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS">                        
+                    <div class="icons" aria-label="Tecnologias utilizadas">
+                        <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
+                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS3">                        
                         <img src="Imagens/tecnologias/figma.svg" alt="Figma">
                     </div>
                 </a>
             </article>
             <article class="projeto hidden">
-                <a href="https://muriloguilhermee.github.io/modelo-portifolio/" target="_blank"><img src="./Imagens/Imagems projetos/modelo portifólio.jpg" alt="Modelo Portifolio">
+                <a href="https://muriloguilhermee.github.io/modelo-portifolio/" target="_blank" rel="noopener noreferrer" aria-label="Projeto Modelo Portfólio">
+                    <img src="./Imagens/Imagems projetos/modelo portifólio.jpg" alt="Projeto Modelo Portfólio">
                     <h3>Modelo Portifólio</h3>
-                    <div class="icons">
-                        <img src="Imagens/tecnologias/html5.svg" alt="HTML">
-                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS">                        
+                    <div class="icons" aria-label="Tecnologias utilizadas">
+                        <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
+                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS3">                        
                         <img src="Imagens/tecnologias/figma.svg" alt="Figma">
                     </div>
                 </a>
             </article>
             <article class="projeto hidden">
-                <a href="https://muriloguilhermee.github.io/android/" target="_blank"><img src="Imagens/Imagems projetos/Android.jpg" alt="Android">
+                <a href="https://muriloguilhermee.github.io/android/" target="_blank" rel="noopener noreferrer" aria-label="Projeto Android">
+                    <img src="Imagens/Imagems projetos/Android.jpg" alt="Projeto Android">
                     <h3>Android</h3>
-                    <div class="icons">
-                        <img src="Imagens/tecnologias/html5.svg" alt="HTML">
-                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS">                        
+                    <div class="icons" aria-label="Tecnologias utilizadas">
+                        <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
+                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS3">                        
                         <img src="Imagens/tecnologias/figma.svg" alt="Figma">
                     </div>
                 </a>
             </article>
             <article class="projeto hidden">
-                <a href="https://muriloguilhermee.github.io/projeto-login/" target="_blank"><img src="Imagens/Imagems projetos/Login.jpg" alt="Login">
+                <a href="https://muriloguilhermee.github.io/projeto-login/" target="_blank" rel="noopener noreferrer" aria-label="Projeto Login">
+                    <img src="Imagens/Imagems projetos/Login.jpg" alt="Projeto Login">
                     <h3>Login</h3>
-                    <div class="icons">
-                        <img src="Imagens/tecnologias/html5.svg" alt="HTML">
-                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS">                        
+                    <div class="icons" aria-label="Tecnologias utilizadas">
+                        <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
+                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS3">                        
                         <img src="Imagens/tecnologias/figma.svg" alt="Figma">
                     </div>
                 </a>
             </article>
             <article class="projeto hidden">
-                <a href="https://muriloguilhermee.github.io/projeto-receita/" target="_blank"><img src="Imagens/Imagems projetos/Receita.jpg" alt="Receita">
+                <a href="https://muriloguilhermee.github.io/projeto-receita/" target="_blank" rel="noopener noreferrer" aria-label="Projeto Receita">
+                    <img src="Imagens/Imagems projetos/Receita.jpg" alt="Projeto Receita">
                     <h3>Receita</h3>
-                    <div class="icons">
-                        <img src="Imagens/tecnologias/html5.svg" alt="HTML">
-                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS">                        
+                    <div class="icons" aria-label="Tecnologias utilizadas">
+                        <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
+                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS3">                        
                         <img src="Imagens/tecnologias/figma.svg" alt="Figma">
                     </div>
                 </a>
             </article>
             <article class="projeto hidden">
-                <a href="https://muriloguilhermee.github.io/projeto-site-cordel/" target="_blank"><img src="Imagens/Imagems projetos/Cordel.jpg" alt="Cordel">
+                <a href="https://muriloguilhermee.github.io/projeto-site-cordel/" target="_blank" rel="noopener noreferrer" aria-label="Projeto Cordel">
+                    <img src="Imagens/Imagems projetos/Cordel.jpg" alt="Projeto Cordel">
                     <h3>Cordel</h3>
-                    <div class="icons">
-                        <img src="Imagens/tecnologias/html5.svg" alt="HTML">
-                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS">                        
+                    <div class="icons" aria-label="Tecnologias utilizadas">
+                        <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
+                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS3">                        
                         <img src="Imagens/tecnologias/figma.svg" alt="Figma">
                     </div>
                 </a>
             </article>
             <article class="projeto hidden">
-                <a href="https://muriloguilhermee.github.io/projeto-travelgram/" target="_blank"><img src="Imagens/Imagems projetos/Travelgram.jpg" alt="Travelgram">
+                <a href="https://muriloguilhermee.github.io/projeto-travelgram/" target="_blank" rel="noopener noreferrer" aria-label="Projeto Travelgram">
+                    <img src="Imagens/Imagems projetos/Travelgram.jpg" alt="Projeto Travelgram">
                     <h3>Travelgram</h3>
-                    <div class="icons">
-                        <img src="Imagens/tecnologias/html5.svg" alt="HTML">
-                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS">                        
+                    <div class="icons" aria-label="Tecnologias utilizadas">
+                        <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
+                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS3">                        
                         <img src="Imagens/tecnologias/figma.svg" alt="Figma">
                     </div>
                 </a>
             </article>
             <article class="projeto hidden">
-                <a href="https://muriloguilhermee.github.io/projeto-turismo/" target="_blank"><img src="Imagens/Imagems projetos/Turismo.jpg" alt="Turismo">
+                <a href="https://muriloguilhermee.github.io/projeto-turismo/" target="_blank" rel="noopener noreferrer" aria-label="Projeto Turismo">
+                    <img src="Imagens/Imagems projetos/Turismo.jpg" alt="Projeto Turismo">
                     <h3>Turismo</h3>
-                    <div class="icons">
-                        <img src="Imagens/tecnologias/html5.svg" alt="HTML">
-                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS">                        
+                    <div class="icons" aria-label="Tecnologias utilizadas">
+                        <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
+                        <img src="Imagens/tecnologias/css-3.svg" alt="CSS3">                        
                         <img src="Imagens/tecnologias/figma.svg" alt="Figma">
                     </div>
                 </a>
             </article>
         </section>
-        <div class="btn-container"><button id="verMais">Ver mais</button></div>
-        <section id="final">
+        <div class="btn-container">
+            <button id="verMais" aria-label="Mostrar mais projetos">Ver mais</button>
+        </div>
+        <section id="final" aria-label="Informações de contato">
             <article>
                 <h1>Informações Adicionais</h1>
-                <p><i class="fas fa-home"></i><a href="#principal"> Inicio</a></p>
-                <p><i class="fa-solid fa-location-dot"></i> Franca-SP</a></p>
-                <p><i class="fa-solid fa-phone"></i> Contato: (16)99242-2653</p>
-                <p><i class="fa-solid fa-envelope"></i> E-mail: murilogcode@gmail.com</p>
+                <p><i class="fas fa-home" aria-hidden="true"></i><a href="#principal"> Início</a></p>
+                <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Franca - SP</p>
+                <p><i class="fa-solid fa-phone" aria-hidden="true"></i> Contato: <a href="tel:+5516992422653">(16) 99242-2653</a></p>
+                <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> E-mail: <a href="mailto:murilogcode@gmail.com">murilogcode@gmail.com</a></p>
             </article>
         </section>
     </main>
     <footer>
-        <p> By Murilo Guilherme
-        </p>
+        <p>&copy; 2025 Murilo Guilherme. Todos os direitos reservados.</p>
     </footer>
 </body>
 <script src="script.js"></script>

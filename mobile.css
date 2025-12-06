@@ -1,75 +1,150 @@
 @charset "UTF-8";
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     body {
-        height: 100vw;
-        min-width: 350px;
-        max-width: 400px;
+        height: auto;
+        min-width: 320px;
+        width: 100%;
     }
+
     section#principal {
         flex-direction: column;
-        height: 680px;
-        width: 390px;
+        height: auto;
+        min-height: 100vh;
+        width: 100%;
+        padding: 40px 20px;
+        background-attachment: scroll;
     }
-    article#social {
+
+    nav#social {
         flex-direction: row;
+        padding: 20px;
+        gap: 15px;
+        justify-content: center;
+        width: 100%;
     }
-    article#scroll{ 
+
+    nav#social > a {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    article#scroll {
         writing-mode: horizontal-tb;
+        padding: 20px;
+        text-align: center;
+    }
+
+    article#scroll > a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    article#scroll > a i {
+        writing-mode: horizontal-tb;
+        margin-top: 0;
     }
     section#sec {
         flex-direction: column;
         align-items: center;
-        width: 390px;
-        padding: 50px;
-        padding-bottom: 0px;
+        width: 100%;
+        padding: 40px 20px;
     }
+
+    article#img {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
     article#img > img {
-        height: 400px;
-        width: 300px;
+        height: auto;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        display: block;
     }
-    article#conteudo{
-        width: 350px;
+
+    article#conteudo {
+        width: 100%;
+        max-width: 100%;
         padding: 20px;
     }
-    article#conteudo > a > input{ 
-        margin-top: 50px;
-        margin-left: 30px;
+
+    article#conteudo > a.btn-download {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    article#conteudo > a.btn-download > button {
+        width: 100%;
+        max-width: 280px;
+        margin: 0;
     }
     section#skill {
-        height: 1200px;
-        width: 390px;
-        padding: 0px;
+        min-height: auto;
+        width: 100%;
+        padding: 40px 20px;
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
+        gap: 30px;
+    }
 
-    }
-    section#skill > article {
-        height: 395px;
-        width: 350px;
-    }
-    section#skill >article#skill {
-        padding: 0px;
-        padding-top: 0px;
-        margin-top: -200px;
-    }
-    section#skill >article#habilidades{
-        margin-top: -100px;
-    }
-    section#skill > article > h2{ 
-        width: 350px;
-        padding: 0px;
-        padding-bottom: 0px;
-    }
-    section#skill > article > p {
-        width: 350px;
-        padding: 25px;
-        align-self: center;
-    }
-    section#skill > article > div {
-        width: 350px;
+    section#skill > article#skill-text {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
         padding: 20px;
+        margin: 0;
     }
 
+    section#skill > article#skill-text > h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    section#skill > article#skill-text > p {
+        width: 100%;
+        padding: 0;
+        font-size: 15px;
+    }
+
+    section#skill > article#habilidades {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+
+    section#skill > article#habilidades > div {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .projetos {
+        padding: 30px 20px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #projetos {
+        font-size: 28px;
+        margin: 50px 0 30px 0;
+    }
+
+    section#final {
+        padding: 50px 20px;
+    }
+
+    section#final > article > h1 {
+        font-size: 24px;
+    }
+
+    section#final > article > p {
+        font-size: 16px;
+    }
 }
