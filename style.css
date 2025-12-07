@@ -1,17 +1,18 @@
 @charset "UTF-8";
 
 :root {
-    --primary-color: #000000;
+    --primary-color: #3d3a35;
     --secondary-color: #ffffff;
-    --accent-color: #6366f1;
-    --text-color: #1f2937;
+    --accent-color: #6b7a8f;
+    --accent-orange: #d4a574;
+    --text-color: #2c2a26;
     --text-light: #6b7280;
-    --bg-light: #f9fafb;
-    --bg-gray: #e5e7eb;
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --bg-light: #f5f3f0;
+    --bg-gray: #e8e6e3;
+    --shadow-sm: 0 1px 2px 0 rgba(61, 58, 53, 0.08);
+    --shadow-md: 0 4px 6px -1px rgba(61, 58, 53, 0.12), 0 2px 4px -1px rgba(61, 58, 53, 0.08);
+    --shadow-lg: 0 10px 15px -3px rgba(61, 58, 53, 0.15), 0 4px 6px -2px rgba(61, 58, 53, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(61, 58, 53, 0.18), 0 10px 10px -5px rgba(61, 58, 53, 0.12);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -184,7 +185,7 @@ p#dev::before, p#dev::after {
     content: '---';
     padding: 0 15px;
     margin: 0px;
-    color: var(--accent-color);
+    color: var(--accent-orange);
     font-weight: bold;
 }
 section#sec {
@@ -291,7 +292,7 @@ article#conteudo > a.btn-download {
 article#conteudo > a.btn-download > button {
     height: 50px;
     width: 230px;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 90%, var(--accent-orange) 100%);
     color: var(--secondary-color);
     font-size: 18px;
     font-weight: 600;
@@ -309,7 +310,7 @@ article#conteudo > a.btn-download > button {
 article#conteudo > a.btn-download > button:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow-lg);
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-color) 100%);
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-color) 90%, var(--accent-orange) 100%);
 }
 
 article#conteudo > a.btn-download > button:active {
@@ -362,7 +363,7 @@ div.skill-container {
 div.skill-bar {
     height: 100%;
     border-radius: 10px;
-    background: linear-gradient(90deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--accent-color) 85%, var(--accent-orange) 100%);
     text-align: center;
     color: var(--secondary-color);
     line-height: 30px;
@@ -602,7 +603,7 @@ button#verMais {
     font-weight: 600;
     border: none;
     border-radius: 30px;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 90%, var(--accent-orange) 100%);
     color: var(--secondary-color);
     cursor: pointer;
     transition: background 1s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
@@ -613,7 +614,7 @@ button#verMais {
 button#verMais:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow-lg);
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-color) 100%);
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-color) 90%, var(--accent-orange) 100%);
 }
 
 button#verMais:active {
