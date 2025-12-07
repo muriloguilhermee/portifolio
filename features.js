@@ -12,23 +12,69 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Atualizar link ativo ao scrollar
     function updateActiveNav() {
-        const sections = document.querySelectorAll('section[id]');
-        const scrollY = window.pageYOffset;
+        const scrollY = window.pageYOffset + 100;
+        const sections = [];
         
-        sections.forEach(section => {
-            const sectionHeight = section.offsetHeight;
-            const sectionTop = section.offsetTop - 100;
-            const sectionId = section.getAttribute('id');
-            
-            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${sectionId}`) {
-                        link.classList.add('active');
+        // Coletar todos os elementos referenciados no menu
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                const targetId = href.substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    let elementTop = targetElement.offsetTop;
+                    let elementBottom = elementTop + targetElement.offsetHeight;
+                    
+                    // Se o elemento é um h2 (como #projetos), considerar também a section seguinte
+                    if (targetElement.tagName === 'H2') {
+                        // Procurar pela section que vem depois do h2
+                        let nextElement = targetElement.nextElementSibling;
+                        while (nextElement) {
+                            if (nextElement.tagName === 'SECTION') {
+                                elementBottom = nextElement.offsetTop + nextElement.offsetHeight;
+                                break;
+                            }
+                            // Se encontrar o botão "Ver mais" ou outro elemento significativo, incluir
+                            if (nextElement.classList && (nextElement.classList.contains('btn-container') || nextElement.classList.contains('projetos'))) {
+                                elementBottom = nextElement.offsetTop + nextElement.offsetHeight;
+                                break;
+                            }
+                            nextElement = nextElement.nextElementSibling;
+                        }
                     }
-                });
+                    
+                    sections.push({
+                        link: link,
+                        top: elementTop,
+                        bottom: elementBottom
+                    });
+                }
             }
         });
+        
+        // Ordenar por posição (de cima para baixo)
+        sections.sort((a, b) => a.top - b.top);
+        
+        // Encontrar a seção ativa
+        let activeLink = null;
+        for (let i = sections.length - 1; i >= 0; i--) {
+            if (scrollY >= sections[i].top - 100) {
+                activeLink = sections[i].link;
+                break;
+            }
+        }
+        
+        // Se não encontrou nenhuma, usar a primeira
+        if (!activeLink && sections.length > 0) {
+            activeLink = sections[0].link;
+        }
+        
+        // Atualizar classes
+        if (activeLink) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            activeLink.classList.add('active');
+        }
     }
     
     // Navbar com scroll - ajustar cores baseado na posição
