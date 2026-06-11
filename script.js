@@ -74,16 +74,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Adicionar efeito de parallax suave no scroll
-    let lastScroll = 0;
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        const principal = document.querySelector('section#principal');
-        if (principal && currentScroll < principal.offsetHeight) {
-            principal.style.transform = `translateY(${currentScroll * 0.5}px)`;
-        }
-        lastScroll = currentScroll;
-    });
 });
 
 // Função para exibir saudação baseada no horário

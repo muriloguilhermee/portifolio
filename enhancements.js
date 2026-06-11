@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 loadingScreen.style.display = 'none';
             }, 500);
-        }, 1500);
+        }, 300);
     });
     
     // ========== CURSOR PERSONALIZADO ==========
@@ -163,16 +163,6 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScroll = currentScroll;
     });
     
-    // ========== PARALLAX SUAVE ==========
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const particles = document.querySelector('.particles');
-        
-        if (particles) {
-            particles.style.transform = `translateY(${scrolled * 0.3}px)`;
-        }
-    });
-    
     // ========== RIPPLE EFFECT ==========
     function createRipple(event) {
         const button = event.currentTarget;
@@ -197,6 +187,17 @@ document.addEventListener('DOMContentLoaded', function() {
     rippleButtons.forEach(button => {
         button.addEventListener('click', createRipple);
     });
-    
+
+    // ========== PARALLAX DE MOUSE NO FUNDO ==========
+    const heroBg = document.querySelector('.hero-bg');
+
+    if (heroBg && window.innerWidth >= 1024 && !isMobile) {
+        document.addEventListener('mousemove', (e) => {
+            const xShift = (window.innerWidth / 2 - e.clientX) / 20;
+            const yShift = (window.innerHeight / 2 - e.clientY) / 20;
+            heroBg.style.transform = `translate(${xShift}px, ${yShift}px)`;
+        });
+    }
+
 });
 

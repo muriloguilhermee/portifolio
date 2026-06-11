@@ -323,49 +323,51 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Simular envio (você pode integrar com Formspree, EmailJS, etc.)
-            // Por enquanto, vamos abrir o cliente de email com os dados preenchidos
             try {
-                const emailBody = `Olá Murilo,\n\n${message}\n\n---\nNome: ${name}\nE-mail: ${email}`;
-                const mailtoLink = `mailto:murilogcode@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
-                
-                // Tentar abrir o cliente de email
-                window.location.href = mailtoLink;
-                
-                // Mostrar mensagem de sucesso
-                if (formMessage) {
-                    formMessage.textContent = 'Redirecionando para seu cliente de email... Se não abrir, envie manualmente para murilogcode@gmail.com';
-                    formMessage.className = 'form-message success';
-                    formMessage.style.display = 'block';
-                }
-                
-                // Limpar formulário após 2 segundos
-                setTimeout(() => {
-                    contactForm.reset();
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        access_key: '16b1085f-ff97-405f-8015-041b3de8b0e2',
+                        name: name,
+                        email: email,
+                        subject: subject,
+                        message: message
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
                     if (formMessage) {
-                        formMessage.textContent = 'Mensagem preparada! Verifique seu cliente de email.';
+                        formMessage.textContent = 'Mensagem enviada com sucesso! Entrarei em contato em breve.';
+                        formMessage.className = 'form-message success';
+                        formMessage.style.display = 'block';
                     }
-                }, 2000);
-                
+                    contactForm.reset();
+                } else {
+                    throw new Error('Falha no envio');
+                }
+
             } catch (error) {
                 if (formMessage) {
-                    formMessage.textContent = 'Erro ao preparar mensagem. Por favor, envie um e-mail diretamente para murilogcode@gmail.com';
+                    formMessage.textContent = 'Erro ao enviar mensagem. Tente novamente ou envie para murilogcode@gmail.com';
                     formMessage.className = 'form-message error';
                     formMessage.style.display = 'block';
                 }
             } finally {
-                // Reabilitar botão após 3 segundos
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Mensagem';
+                }
                 setTimeout(() => {
-                    if (submitButton) {
-                        submitButton.disabled = false;
-                        submitButton.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Mensagem';
-                    }
                     if (formMessage) {
-                        setTimeout(() => {
-                            formMessage.style.display = 'none';
-                        }, 5000);
+                        formMessage.style.display = 'none';
                     }
-                }, 3000);
+                }, 5000);
             }
         });
     }

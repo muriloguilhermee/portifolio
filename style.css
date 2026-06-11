@@ -51,16 +51,27 @@ body {
     border-width: 0;
 }
 section#principal {
-    height: 920px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(Imagens/jakob-owens-uWbRcJSJLV8-unsplash\ 2.png);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    min-height: 100vh;
     display: flex;
     justify-content: space-between;
     position: relative;
+    overflow: hidden;
     animation: fadeIn 1s ease-in;
-    margin-top: -70px; /* Compensar padding do body */
+    margin-top: -70px;
+}
+
+.hero-bg {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(Imagens/jakob-owens-uWbRcJSJLV8-unsplash\ 2.png);
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+    will-change: transform;
+    transition: transform 0.08s ease-out;
 }
 
 @keyframes fadeIn {
@@ -700,4 +711,58 @@ footer {
     color: var(--secondary-color);
     padding: 30px;
     font-size: 16px;
+}
+
+/* ========== HERO CTAs ========== */
+#hero-subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 8px 0 24px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.btn-hero-primary,
+.btn-hero-secondary {
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    letter-spacing: 0.03em;
+    display: inline-block;
+}
+
+.btn-hero-primary {
+    background: var(--accent-orange);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(212, 165, 116, 0.4);
+}
+
+.btn-hero-primary:hover {
+    background: #c49060;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 165, 116, 0.5);
+}
+
+.btn-hero-secondary {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+}
+
+.btn-hero-secondary:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
 }

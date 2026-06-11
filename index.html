@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio de Murilo Guilherme - Desenvolvedor Web especializado em HTML5, CSS3, JavaScript, Node.js e React. Confira meus projetos e habilidades.">
-    <meta name="keywords" content="desenvolvedor web, frontend, backend, JavaScript, React, Node.js, HTML5, CSS3, portfólio">
+    <meta name="description" content="Portfólio de Murilo Guilherme - Desenvolvedor Web front-end e especialista em automação com n8n. HTML5, CSS3, JavaScript, Node.js e integrações via API REST. Franca-SP.">
+    <meta name="keywords" content="desenvolvedor web, frontend, JavaScript, Node.js, HTML5, CSS3, n8n, automação, integração de sistemas, Franca SP, portfólio">
     <meta name="author" content="Murilo Guilherme da Silva">
-    <meta property="og:title" content="Murilo Guilherme - Desenvolvedor Web">
+    <meta property="og:title" content="Murilo Guilherme - Desenvolvedor Web & Automação n8n">
     <meta property="og:description" content="Portfólio profissional de desenvolvedor web com projetos e habilidades técnicas">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://muriloguilhermee.github.io/portifolio/Imagens/Perfil.jpg">
     <meta property="og:url" content="https://muriloguilhermee.github.io/portifolio/">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Murilo Guilherme - Desenvolvedor Web">
-    <meta name="twitter:description" content="Portfólio profissional de desenvolvedor web">
+    <meta name="twitter:title" content="Murilo Guilherme - Desenvolvedor Web & Automação n8n">
+    <meta name="twitter:description" content="Desenvolvedor Web front-end e especialista em automação com n8n. 15 projetos publicados. Franca-SP.">
     <meta name="twitter:image" content="https://muriloguilhermee.github.io/portifolio/Imagens/Perfil.jpg">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mobile.css">
@@ -21,13 +21,14 @@
     <link rel="stylesheet" href="enhancements.css">
     <link rel="shortcut icon" href="favicon-murilo.ico" type="image/x-icon">
     <link rel="manifest" href="manifest.json">
+    <link rel="canonical" href="https://muriloguilhermee.github.io/portifolio/">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" as="style">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Murilo Guilherme da Silva",
-      "jobTitle": "Desenvolvedor Web",
+      "jobTitle": "Desenvolvedor Web & Especialista em Automação n8n",
       "url": "https://muriloguilhermee.github.io/portifolio/",
       "email": "murilogcode@gmail.com",
       "address": {
@@ -47,7 +48,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sriracha&display=swap" rel="stylesheet">    
-    <title>Murilo Guilherme | Desenvolvedor Web</title>
+    <title>Murilo Guilherme | Desenvolvedor Web & Automação | Franca-SP</title>
 </head>
 <body onload="exibirMensagem()">
     <!-- Loading Screen -->
@@ -107,6 +108,7 @@
 
     <main>
         <section id="principal" aria-label="Seção principal">
+            <div class="hero-bg"></div>
             <nav id="social" aria-label="Redes sociais">
                 <a href="https://www.instagram.com/murilloguilhermee?igsh=MWRreTk1aDlza3N4Mg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/in/murilo-guilherme-2624b5236/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -116,22 +118,16 @@
                 <img src="Imagens/Perfil.jpg" alt="Foto de perfil de Murilo Guilherme">
                 <p id="saudacao" aria-live="polite"></p>
                 <p>Eu sou <strong id="typing-name">Murilo Guilherme</strong></p>
-                <p id="dev"><strong id="typing-title">Desenvolvedor</strong></p>
+                <p id="dev"><strong id="typing-title">Desenvolvedor Web & Automação</strong></p>
+                <p id="hero-subtitle">Desenvolvimento front-end e automação de processos com n8n e JavaScript</p>
+                <div class="hero-ctas">
+                    <a href="#contato" class="btn-hero-primary">Entre em Contato</a>
+                    <a href="#projetos" class="btn-hero-secondary">Ver Projetos</a>
+                </div>
             </article>
             
-            <!-- Partículas animadas -->
-            <div class="particles">
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-            </div>
             <article id="scroll">
-                <a href="#img" aria-label="Rolar para baixo">Scroll Down <i class="fas fa-chevron-down"></i></a>
+                <a href="#sec" aria-label="Rolar para baixo">Scroll Down <i class="fas fa-chevron-down"></i></a>
             </article>
         </section>
         <section id="sec" aria-label="Sobre mim">
@@ -139,11 +135,11 @@
                 <img src="Imagens/IMG_6113.jpeg" alt="Murilo Guilherme - Desenvolvedor">
             </article>
             <article id="conteudo">
-                <h2 class="sr-only">Sobre mim</h2>
-                <p class="intro">Eu sou Desenvolvedor</p>
-                <p>Tenho domínio em <strong>HTML5</strong> e <strong>CSS3</strong>, criando sites responsivos e visualmente atraentes. Estruturo conteúdos de forma intuitiva, garantindo experiências fluidas e agradáveis para os usuários.</p>
-                <p>Atualmente, estou evoluindo no universo do <strong>JavaScript</strong>, explorando <strong>Node.js</strong> e <strong>React</strong> para desenvolver aplicações web modernas e dinâmicas. Também tenho experiência em <strong>integrações via n8n</strong>, criando workflows automatizados que conectam diferentes sistemas e otimizam processos. Cada novo aprendizado me motiva ainda mais a criar soluções inovadoras!</p>
-                <p>Sou movido por desafios e pela busca constante de aprimoramento. Estou sempre pronto para aprender, evoluir e transformar ideias em realidade!</p>
+                <h2>Sobre mim</h2>
+                <p class="intro">Desenvolvedor Web & Automação</p>
+                <p>Desenvolvo interfaces web responsivas com <strong>HTML5</strong>, <strong>CSS3</strong> e <strong>JavaScript</strong>, com foco em usabilidade e performance. Crio experiências visuais que funcionam em qualquer dispositivo.</p>
+                <p>Atuo como Coordenador de Suporte na <strong>EvaCloudd</strong>, onde desenvolvo <strong>automações com n8n e JavaScript</strong> para otimizar processos operacionais e integrar sistemas via <strong>API REST</strong>. Essa combinação de desenvolvimento e visão operacional me permite criar soluções que resolvem problemas reais.</p>
+                <p>Tenho experiência com <strong>Node.js</strong>, <strong>MySQL</strong> e fluxos de trabalho completos — do banco de dados à interface final.</p>
                 <hr>
                 <div class="info-pessoal">
                     <p id="nome"><strong>Nome:</strong> Murilo Guilherme da Silva</p>
@@ -161,7 +157,7 @@
         <section id="estatisticas" aria-label="Estatísticas e conquistas">
             <div class="stats-container">
                 <div class="stat-item">
-                    <div class="stat-number" data-target="14">0</div>
+                    <div class="stat-number" data-target="15">0</div>
                     <div class="stat-label">Projetos</div>
                 </div>
                 <div class="stat-item">
@@ -173,8 +169,8 @@
                     <div class="stat-label">Anos de Experiência</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number" data-target="100">0</div>
-                    <div class="stat-label">% Dedicado</div>
+                    <div class="stat-number" data-target="15">0</div>
+                    <div class="stat-label">Automações n8n</div>
                 </div>
             </div>
         </section>
@@ -182,7 +178,7 @@
         <section id="skill" aria-label="Habilidades técnicas">
             <article id="skill-text">
                 <h2>Minhas Habilidades</h2>
-                <p>Sou uma pessoa altamente proativa, não descanso até resolver um problema ou concluir uma tarefa. Quando me proponho a algo, coloco todo meu foco e energia para alcançar o objetivo, buscando soluções criativas e eficazes. Tenho um grande compromisso com o aprendizado contínuo e estou sempre em busca de novas habilidades para melhorar minha performance. Atualmente, estou me dedicando ao aprendizado de JavaScript, API REST e integrações via n8n, pois, sei que essas competências são essenciais para o desenvolvimento de soluções tecnológicas cada vez mais completas e inovadoras. Com minha determinação e foco, sei que posso superar qualquer desafio que surgir em meu caminho.</p>
+                <p>Trabalho com <strong>HTML5</strong> e <strong>CSS3</strong> na construção de interfaces responsivas usando Flexbox, Grid e animações. Em <strong>JavaScript</strong>, desenvolvo lógica de aplicação, manipulação de DOM e integração com APIs. Uso <strong>Node.js</strong> para scripts de backend e o <strong>n8n</strong> para criar workflows de integração entre sistemas sem escrever infraestrutura do zero. <strong>MySQL</strong> cobre modelagem e consultas de dados. <strong>Git</strong> e <strong>GitHub</strong> fazem parte do meu fluxo diário de trabalho.</p>
             </article>
             <article id="habilidades">
                 <div>
@@ -220,7 +216,7 @@
                     <div class="skill-container">
                         <div class="skill-bar" style="width: 90%;">90%</div>
                     </div>
-                    <div class="skill-label"><img src="Imagens/tecnologias/github.svg" alt="HTML" class="icon">GitHub</div>
+                    <div class="skill-label"><img src="Imagens/tecnologias/github.svg" alt="GitHub" class="icon">GitHub</div>
                     <div class="skill-container">
                         <div class="skill-bar" style="width: 99%;">99%</div>
                     </div>
@@ -241,7 +237,7 @@
                     <img loading="lazy" src="Imagens/Imagems projetos/Projeto4.jpg" alt="Projeto Numbers">
                     <div class="projeto-content">
                         <h3>Numbers</h3>
-                        <p class="projeto-desc">Sorteador de números aleatórios com interface moderna e intuitiva</p>
+                        <p class="projeto-desc">Sorteador configurável com intervalo mínimo e máximo definidos pelo usuário. Validação de entrada e animação de revelação em JavaScript puro, sem dependências externas.</p>
                     </div>
                     <div class="icons" aria-label="Tecnologias utilizadas">
                         <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
@@ -256,7 +252,7 @@
                     <img loading="lazy" src="Imagens/Imagems projetos/Conversor.jpg" alt="Projeto Conversor">
                     <div class="projeto-content">
                         <h3>Conversor</h3>
-                        <p class="projeto-desc">Conversor de moedas com atualização de valores em tempo real</p>
+                        <p class="projeto-desc">Conversor de moedas integrado com API de câmbio em tempo real. Suporte a múltiplas moedas, atualização automática de taxas e layout responsivo para mobile.</p>
                     </div>
                     <div class="icons" aria-label="Tecnologias utilizadas">
                         <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
@@ -271,7 +267,7 @@
                     <img loading="lazy" src="Imagens/Imagems projetos/Reembolso.jpg" alt="Projeto Reembolso">
                     <div class="projeto-content">
                         <h3>Reembolso</h3>
-                        <p class="projeto-desc">Sistema de gestão de reembolsos com controle de despesas</p>
+                        <p class="projeto-desc">Aplicação de controle de despesas com CRUD completo: cadastro, edição e exclusão de itens. Cálculo automático de totais e persistência de dados via localStorage.</p>
                     </div>
                     <div class="icons" aria-label="Tecnologias utilizadas">
                         <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
@@ -286,7 +282,7 @@
                     <img loading="lazy" src="Imagens/Imagems projetos/Lista de compras.jpg" alt="Projeto Lista de Compras">
                     <div class="projeto-content">
                         <h3>Lista de Compras</h3>
-                        <p class="projeto-desc">Aplicativo de lista de compras com funcionalidades de adicionar e remover itens</p>
+                        <p class="projeto-desc">Gerenciador de lista de compras com adição, remoção e marcação de itens como comprados. Dados persistidos no localStorage entre sessões do navegador.</p>
                     </div>
                     <div class="icons" aria-label="Tecnologias utilizadas">
                         <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
@@ -301,7 +297,7 @@
                     <img loading="lazy" src="./Imagens/Imagems projetos/Patins.jpg" alt="Projeto Patins">
                     <div class="projeto-content">
                         <h3>Patins</h3>
-                        <p class="projeto-desc">Landing page com animações CSS modernas e design atraente</p>
+                        <p class="projeto-desc">Landing page de produto com animações CSS avançadas: keyframes personalizados, transições de estado e efeito parallax. Foco em storytelling visual e performance.</p>
                     </div>
                     <div class="icons" aria-label="Tecnologias utilizadas">
                         <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
@@ -315,7 +311,7 @@
                     <img loading="lazy" src="./Imagens/Imagems projetos/Projeto1.jpg" alt="Projeto Portal de Notícias">
                     <div class="projeto-content">
                         <h3>Portal de Noticias</h3>
-                        <p class="projeto-desc">Portal de notícias responsivo com layout moderno e organizado</p>
+                        <p class="projeto-desc">Portal de notícias com layout em CSS Grid, hierarquia tipográfica definida e categorias organizadas. Estrutura semântica com foco em legibilidade e navegação.</p>
                     </div>
                     <div class="icons" aria-label="Tecnologias utilizadas">
                         <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
@@ -329,7 +325,7 @@
                     <img loading="lazy" src="./Imagens/Imagems projetos/Zingen.jpg" alt="Projeto Zingen">
                     <div class="projeto-content">
                         <h3>Zingen</h3>
-                        <p class="projeto-desc">Site institucional com design clean e profissional</p>
+                        <p class="projeto-desc">Site institucional para empresa de tecnologia com seções de hero, features, depoimentos e CTA. Design limpo com paleta consistente e responsividade total.</p>
                     </div>
                     <div class="icons" aria-label="Tecnologias utilizadas">
                         <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
@@ -343,7 +339,7 @@
                     <img loading="lazy" src="./Imagens/Imagems projetos/Formulário.jpg" alt="Projeto Formulário">
                     <div class="projeto-content">
                         <h3>Formulário</h3>
-                        <p class="projeto-desc">Formulário de contato com validação e design moderno</p>
+                        <p class="projeto-desc">Formulário de cadastro com validação em JavaScript: campos obrigatórios, verificação de e-mail, feedback visual de erros em tempo real e confirmação de envio.</p>
                     </div>
                     <div class="icons" aria-label="Tecnologias utilizadas">
                         <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
@@ -356,8 +352,8 @@
                 <a href="https://muriloguilhermee.github.io/modelo-portifolio/" target="_blank" rel="noopener noreferrer" aria-label="Projeto Modelo Portfólio">
                     <img loading="lazy" src="./Imagens/Imagems projetos/modelo portifólio.jpg" alt="Projeto Modelo Portfólio">
                     <div class="projeto-content">
-                        <h3>Modelo Portifólio</h3>
-                        <p class="projeto-desc">Template de portfólio profissional e responsivo</p>
+                        <h3>Modelo Portfólio</h3>
+                        <p class="projeto-desc">Template de portfólio responsivo e reutilizável. Variáveis CSS para personalização rápida de cores e tipografia, com estrutura de seções padronizadas e animações de entrada.</p>
                     </div>
                     <div class="icons" aria-label="Tecnologias utilizadas">
                         <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
@@ -371,7 +367,7 @@
                     <img loading="lazy" src="Imagens/Imagems projetos/Android.jpg" alt="Projeto Android">
                     <div class="projeto-content">
                         <h3>Android</h3>
-                        <p class="projeto-desc">Landing page sobre Android com informações e curiosidades</p>
+                        <p class="projeto-desc">Landing page informativa sobre a história e evolução do Android. Elementos visuais progressivos, estrutura de artigo com âncoras de navegação interna.</p>
                     </div>
                     <div class="icons" aria-label="Tecnologias utilizadas">
                         <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
@@ -385,7 +381,7 @@
                     <img loading="lazy" src="Imagens/Imagems projetos/Login.jpg" alt="Projeto Login">
                     <div class="projeto-content">
                         <h3>Login</h3>
-                        <p class="projeto-desc">Página de login com design moderno e responsivo</p>
+                        <p class="projeto-desc">Interface de autenticação com validação de campos, feedback visual de erros e design responsivo. Simulação de fluxo de login e redirecionamento em JavaScript.</p>
                     </div>
                     <div class="icons" aria-label="Tecnologias utilizadas">
                         <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
@@ -399,7 +395,7 @@
                     <img loading="lazy" src="Imagens/Imagems projetos/Receita.jpg" alt="Projeto Receita">
                     <div class="projeto-content">
                         <h3>Receita</h3>
-                        <p class="projeto-desc">Site de receitas culinárias com layout atrativo</p>
+                        <p class="projeto-desc">Site culinário com cards de receitas, filtro por categoria e apresentação detalhada de ingredientes e modo de preparo. Layout editorial com tipografia legível.</p>
                     </div>
                     <div class="icons" aria-label="Tecnologias utilizadas">
                         <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
@@ -413,7 +409,7 @@
                     <img loading="lazy" src="Imagens/Imagems projetos/Cordel.jpg" alt="Projeto Cordel">
                     <div class="projeto-content">
                         <h3>Cordel</h3>
-                        <p class="projeto-desc">Site sobre literatura de cordel com design tradicional</p>
+                        <p class="projeto-desc">Site cultural sobre literatura de cordel nordestina. Tipografia customizada, paleta de cores regional e estrutura editorial otimizada para leitura longa.</p>
                     </div>
                     <div class="icons" aria-label="Tecnologias utilizadas">
                         <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
@@ -427,7 +423,7 @@
                     <img loading="lazy" src="Imagens/Imagems projetos/Travelgram.jpg" alt="Projeto Travelgram">
                     <div class="projeto-content">
                         <h3>Travelgram</h3>
-                        <p class="projeto-desc">Rede social de viagens inspirada no Instagram</p>
+                        <p class="projeto-desc">Clone visual de rede social de viagens com grid responsivo de publicações, perfil de usuário e interface de feed inspirada no Instagram.</p>
                     </div>
                     <div class="icons" aria-label="Tecnologias utilizadas">
                         <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
@@ -441,7 +437,7 @@
                     <img loading="lazy" src="Imagens/Imagems projetos/Turismo.jpg" alt="Projeto Turismo">
                     <div class="projeto-content">
                         <h3>Turismo</h3>
-                        <p class="projeto-desc">Site de turismo com destinos e informações de viagem</p>
+                        <p class="projeto-desc">Site de agência de turismo com destinos em destaque, galeria de imagens e seção de pacotes. Layout editorial com múltiplos CTAs para conversão.</p>
                     </div>
                     <div class="icons" aria-label="Tecnologias utilizadas">
                         <img src="Imagens/tecnologias/html5.svg" alt="HTML5">
@@ -464,7 +460,7 @@
                         <i class="fas fa-user-tie"></i>
                     </div>
                     <div class="timeline-content">
-                        <h3>Coordenador de Suporte</h3>
+                        <h3>Coordenador de Suporte — EvaCloudd</h3>
                         <span class="timeline-date">2024 - Presente</span>
                         <p>Coordenação de equipe de suporte N1, responsável por resolver problemas técnicos e operacionais. Gerenciamento de fluxo de demandas, encaminhando casos complexos para equipe de desenvolvimento quando necessário. Desenvolvimento de automações utilizando n8n e JavaScript para otimizar processos e melhorar a eficiência da equipe. Liderança e mentoria da equipe, garantindo qualidade no atendimento e resolução de problemas.</p>
                     </div>
@@ -510,6 +506,7 @@
                     <h3>Informações de Contato</h3>
                     <p><i class="fas fa-map-marker-alt"></i> Franca - SP, Brasil</p>
                     <p><i class="fas fa-phone"></i> <a href="tel:+5516992422653">(16) 99242-2653</a></p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5516992422653" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
                     <p><i class="fas fa-envelope"></i> <a href="mailto:murilogcode@gmail.com">murilogcode@gmail.com</a></p>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/murilo-guilherme-2624b5236/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -542,18 +539,17 @@
             </div>
         </section>
 
-        <section id="final" aria-label="Informações adicionais">
+        <section id="final" aria-label="Rodapé informativo">
             <article>
-                <h1>Informações Adicionais</h1>
-                <p><i class="fas fa-home" aria-hidden="true"></i><a href="#principal"> Início</a></p>
-                <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Franca - SP</p>
-                <p><i class="fas fa-phone" aria-hidden="true"></i> Contato: <a href="tel:+5516992422653">(16) 99242-2653</a></p>
-                <p><i class="fas fa-envelope" aria-hidden="true"></i> E-mail: <a href="mailto:murilogcode@gmail.com">murilogcode@gmail.com</a></p>
+                <h3>Murilo Guilherme</h3>
+                <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Franca - SP, Brasil</p>
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:murilogcode@gmail.com">murilogcode@gmail.com</a></p>
+                <p><i class="fab fa-whatsapp" aria-hidden="true"></i> <a href="https://wa.me/5516992422653" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
             </article>
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 Murilo Guilherme. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Murilo Guilherme. Todos os direitos reservados.</p>
     </footer>
     <script src="script.js"></script>
     <script src="features.js"></script>
