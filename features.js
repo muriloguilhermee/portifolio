@@ -332,8 +332,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     },
                     body: JSON.stringify({
                         access_key: '16b1085f-ff97-405f-8015-041b3de8b0e2',
+                        from_name: 'Portfólio Murilo Guilherme',
                         name: name,
                         email: email,
+                        replyto: email,
                         subject: subject,
                         message: message
                     })
