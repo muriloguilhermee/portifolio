@@ -514,7 +514,9 @@
                         <a href="https://www.instagram.com/murilloguilhermee" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <form id="contactForm" class="contact-form" method="POST">
+                <form id="contactForm" class="contact-form" method="POST" action="https://api.web3forms.com/submit">
+                    <input type="hidden" name="access_key" value="16b1085f-ff97-405f-8015-041b3de8b0e2">
+                    <input type="hidden" name="redirect" value="false">
                     <div class="form-group">
                         <label for="name">Nome *</label>
                         <input type="text" id="name" name="name" required>
